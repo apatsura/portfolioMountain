@@ -65,6 +65,9 @@ function styles() {
       };
     })
   }))
+  .pipe(sass({
+    includePaths: require('node-normalize-scss').includePaths
+  }))
   .pipe(sourcemaps.init())
   .pipe(autoprefixer())
   .pipe(sass({ outputStyle: 'compressed' }))
