@@ -13,6 +13,9 @@ const autoprefixer = require('gulp-autoprefixer');
 const rename = require('gulp-rename');
 const sourcemaps = require('gulp-sourcemaps');
 
+// image
+const imagemin = require('gulp-imagemin');
+
 // webpack
 const gulpWebpack = require('gulp-webpack'); // v2
 const webpack = require('webpack'); // v3
@@ -25,7 +28,7 @@ const paths = {
     src: 'src/templates/**/*.pug',
     dest: 'build/assets/'
   },
-  style: {
+  styles: {
     src: 'src/styles/**/*.scss',
     dest: 'build/assets/styles/'
   },
@@ -79,7 +82,7 @@ function styles() {
 // image
 function images() {
   return gulp.src(paths.images.src, {since: gulp.lastRun(images)})
-  .pipe(imagemin({optimizationLevel: 5}))
+  .pipe(imagemin())
   .pipe(gulp.dest(paths.images.dest));
 }
 
@@ -99,7 +102,7 @@ function scripts() {
       };
     })
   }))
-  .pipe(gulpWebapck(webpackConfig, webpack))
+  .pipe(gulpWebpack(webpackConfig, webpack))
   .pipe(gulp.dest(paths.scripts.dest));
 }
 
@@ -121,7 +124,8 @@ function server() {
 
 exports.templates = templates;
 exports.styles = styles;
-exports.del = del;
+exports.clean = clean;
+exports.images = images;
 exports.scripts = scripts;
 
 gulp.task('default', gulp.series(
