@@ -1,28 +1,44 @@
 extends ../template
 
-block title
-	title Welcome
+block variables
+  - var title = "Welcome"
 
 block content
-	header.header__welcome
-		.btn__authoriz
-			a.btn__authoriz_link(href='#') Авторизоваться
-		.welcome__block
-			.info__block
-				.img__wrapper
-					img.img__avatar(src='assets/images/avatar.jpg' alt='Avatar')
-					h2.user__name Пацура Александр
-					p.user__description Личный сайт веб разработчика
-				.social__icons
-					i.fa.fa-fb
-			nav
-				ul.menu
-					li.menu__item
-						a.menu__item_link(href='works.html') Мои работы
-					li.menu__item
-						a.menu__item_link(href='about.html') Обо мне
-					li.menu__item
-						a.menu__item_link(href='blog.html') Блог
-	footer.footer
-		.copy
-			p © Пацура Александр | создано с любовью в LoftSchool | 2017
+  section.section.section__header
+    .box.authoriz
+      .authoriz__btn
+        a.btn__login(href="#") Авторизоваться
+    .box.user
+      .user__welcome
+        .user__image
+          img.user__avatar(src="assets/images/avatar.jpg", alt="Avatar")
+        .user__info
+          h2.user__name
+            | Пацура Александр
+          p.user__description
+            | Личный сайт веб разработчика
+          .user__socials
+            ul.socials
+              li.socials__item
+                a.socials__item.socials__item_vk(href="#")
+                  svg(width="30" height="30" class="icon_sprites")
+                    use(xlink:href="assets/images/sprites/sprite.svg#vk")
+              li.socials__item
+                a.socials__item.socials__item_git(href="#")
+                  svg(width="30" height="30" class="icon_sprites")
+                    use(xlink:href="assets/images/sprites/sprite.svg#github")
+              li.socials__item
+                a.socials__item.socials__item_in(href="#")
+                  svg(width="30" height="30" class="icon_sprites")
+                    use(xlink:href="assets/images/sprites/sprite.svg#in")
+        nav.user__menu
+          ul.menu
+            li.menu__items
+              a.menu__items_link(href="works.html") Мои работы
+            li.menu__items
+              a.menu__items_link(href="about.html") Обо мне
+            li.menu__items
+              a.menu__items_link(href="blog.html") Блог
+    .box.user__copy
+      .copy__text
+        p © Пацура Александр | создано с любовью в LoftSchool | 2017

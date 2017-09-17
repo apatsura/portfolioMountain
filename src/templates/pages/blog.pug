@@ -1,0 +1,20 @@
+extends ../template
+
+block variables
+  - var title = "Blog"
+
+block content
+  .user__socials
+    ul.socials
+      li.socials__item
+        a.socials__item.socials__item_vk(href="#")
+          svg(width="30" height="30" class="icon_sprites")
+            use(xlink:href="assets/images/sprites/sprite.svg#vk")
+      li.socials__item
+        a.socials__item.socials__item_git(href="#")
+          svg(width="30" height="30" class="icon_sprites")
+            use(xlink:href="assets/images/sprites/sprite.svg#github")
+      li.socials__item
+        a.socials__item.socials__item_in(href="#")
+          svg(width="30" height="30" class="icon_sprites")
+            use(xlink:href="assets/images/sprites/sprite.svg#in")

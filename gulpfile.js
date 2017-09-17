@@ -34,6 +34,10 @@ const paths = {
     src: 'src/templates/**/*.pug',
     dest: 'build/assets/'
   },
+  fonts: {
+    src: 'src/fonts/**/*.*',
+    dest: 'build/assets/fonts/'
+  },
   styles: {
     src: 'src/styles/**/*.scss',
     dest: 'build/assets/styles/'
@@ -67,9 +71,15 @@ function templates() {
   .pipe(gulp.dest(paths.root));
 }
 
+// fonts
+function fonts() {
+  return gulp.src(paths.fonts.src)
+  .pipe(gulp.dest(paths.fonts.dest));
+}
+
 // style scss
 function styles() {
-  return gulp.src('./src/styles/app.scss')
+  return gulp.src(paths.styles.src)
   .pipe(plumber({
     errorHandler: notify.onError(function(error) {
       return {
@@ -134,7 +144,7 @@ function clean() {
 
 // webpack
 function scripts() {
-  return gulp.src('src/scripts/app.js')
+  return gulp.src(paths.scripts.src)
   .pipe(plumber({
     errorHandler: notify.onError(function(error) {
       return {
@@ -149,6 +159,7 @@ function scripts() {
 
 // watch src
 function watch() {
+  gulp.watch(paths.fonts.src, fonts);
   gulp.watch(paths.styles.src, styles);
   gulp.watch(paths.templates.src, templates);
   gulp.watch(paths.images.src, images);
@@ -165,6 +176,7 @@ function server() {
 }
 
 exports.templates = templates;
+exports.fonts = fonts;
 exports.styles = styles;
 exports.clean = clean;
 exports.images = images;
@@ -172,7 +184,7 @@ exports.sprites = sprites;
 exports.scripts = scripts;
 
 gulp.task('default', gulp.series(
-  gulp.parallel(styles, templates, scripts, images, sprites),
+  gulp.parallel(fonts, styles, templates, scripts, images, sprites),
   gulp.parallel(watch, server)
 ));
 
