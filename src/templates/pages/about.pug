@@ -1,0 +1,22 @@
+extends ../template
+
+block variables
+  - var title = "Welcome"
+
+block content
+  ul.wrap
+    li.item
+      svg.circles(viewbox='0 0 110 110')
+        circle.circle__first(r='45', cx='50%', cy='50%', fill='none')
+        circle.circle__second.circle-25(r='45', cx='50%', cy='50%', transform='rotate(-90 55 55)')
+      span.item__title HTML & CSS
+    li.item
+      svg.circles(viewbox='0 0 110 110')
+        circle.circle__first(r='45', cx='50%', cy='50%', fill='none')
+        circle.circle__second.circle-45(r='45', cx='50%', cy='50%', transform='rotate(-90 55 55)')
+      span.item__title javaScript
+    li.item
+      svg.circles(viewbox='0 0 110 110')
+        circle.circle__first(r='45', cx='50%', cy='50%', fill='none')
+        circle.circle__second.circle-75(r='45', cx='50%', cy='50%', transform='rotate(-90 55 55)')
+      span.item__title Node.js

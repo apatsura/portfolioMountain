@@ -4,32 +4,32 @@ block variables
   - var title = "Welcome"
 
 block content
-  section.section.section__header
-    .box.authoriz
-      .authoriz__btn
-        a.btn__login(href="#") Авторизоваться
-    .box.user
-      .user__welcome
+  header.section__header
+    .header__section
+      .authoriz
+        a.btn__authoriz(href="#") Авторизоваться
+    .user__block
+      .welcome__user
         .user__image
-          img.user__avatar(src="assets/images/avatar.jpg", alt="Avatar")
+          img(src="assets/images/avatar.jpg", alt="Avatar").image__avatar
         .user__info
           h2.user__name
             | Пацура Александр
-          p.user__description
+          p.description
             | Личный сайт веб разработчика
           .user__socials
             ul.socials
               li.socials__item
                 a.socials__item.socials__item_vk(href="#")
-                  svg(width="30" height="30" class="icon_sprites")
+                  svg(width="30" height="30").icon_sprites
                     use(xlink:href="assets/images/sprites/sprite.svg#vk")
               li.socials__item
                 a.socials__item.socials__item_git(href="#")
-                  svg(width="30" height="30" class="icon_sprites")
+                  svg(width="30" height="30").icon_sprites
                     use(xlink:href="assets/images/sprites/sprite.svg#github")
               li.socials__item
                 a.socials__item.socials__item_in(href="#")
-                  svg(width="30" height="30" class="icon_sprites")
+                  svg(width="30" height="30").icon_sprites
                     use(xlink:href="assets/images/sprites/sprite.svg#in")
         nav.user__menu
           ul.menu
@@ -39,6 +39,7 @@ block content
               a.menu__items_link(href="about.html") Обо мне
             li.menu__items
               a.menu__items_link(href="blog.html") Блог
-    .box.user__copy
-      .copy__text
-        p © Пацура Александр | создано с любовью в LoftSchool | 2017
+    .footer__section
+      .user__copy
+        .copy__text
+          p © Пацура Александр | создано с любовью в LoftSchool | 2017

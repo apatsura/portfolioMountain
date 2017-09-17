@@ -4,17 +4,94 @@ block variables
   - var title = "Blog"
 
 block content
-  .user__socials
-    ul.socials
-      li.socials__item
-        a.socials__item.socials__item_vk(href="#")
-          svg(width="30" height="30" class="icon_sprites")
-            use(xlink:href="assets/images/sprites/sprite.svg#vk")
-      li.socials__item
-        a.socials__item.socials__item_git(href="#")
-          svg(width="30" height="30" class="icon_sprites")
-            use(xlink:href="assets/images/sprites/sprite.svg#github")
-      li.socials__item
-        a.socials__item.socials__item_in(href="#")
-          svg(width="30" height="30" class="icon_sprites")
-            use(xlink:href="assets/images/sprites/sprite.svg#in")
+  header.section__header.blog
+    .container
+      .header__menu
+        .header__social
+          ul.socials
+            li.socials__item
+              a.socials__item.socials__item_vk(href="#")
+                svg(width="30" height="30").icon_sprites
+                  use(xlink:href="assets/images/sprites/sprite.svg#vk")
+            li.socials__item
+              a.socials__item.socials__item_git(href="#")
+                svg(width="30" height="30").icon_sprites
+                  use(xlink:href="assets/images/sprites/sprite.svg#github")
+            li.socials__item
+              a.socials__item.socials__item_in(href="#")
+                svg(width="30" height="30").icon_sprites
+                  use(xlink:href="assets/images/sprites/sprite.svg#in")
+        .hamburger
+          svg(width="45" height="35").icon_sprites
+            use(xlink:href="assets/images/sprites/sprite.svg#hamburger")
+          nav.main__menu
+            ul.menu
+              li.menu__items
+                a.menu__items_link(href="works.html") Мои работы
+              li.menu__items
+                a.menu__items_link(href="about.html") Обо мне
+              li.menu__items
+                a.menu__items_link(href="blog.html") Блог
+    .section__user
+      .user__image
+        img(src="assets/images/avatar.jpg", alt="Avatar").image__avatar
+      .section__title
+        h1.title Блог
+          span.title__bg
+            svg.icon_sprites
+              use(xlink:href="assets/images/sprites/sprite.svg#blog_header")
+        p.description Статьи, которые я написал
+  section.section__main
+    .bg__traingle
+      svg.traingle(xmlns="http://www.w3.org/2000/svg", viewbox="0 0 1000 85", preserveaspectratio="none" width="100%" height="155")
+        polygon.left(points="0,0 0,86 520.8,86 520.8,86")
+        polygon.right(points="1000,0 1000,86 480.8,86 480.8,86")
+    .container
+      .main__content
+        .sidebar
+          nav.content__menu
+            ul.menu__article
+              li.menu__article_item
+                a(href="#").article__item_link.active Самое важное в SASS
+              li.menu__article_item
+                a(href="#").article__item_link Приёмы в вёрстке, без которых  не обходится ни один сайт
+              li.menu__article_item
+                a(href="#").article__item_link Самый необходимый набор Gulp плагинов
+              li.menu__article_item
+                a(href="#").article__item_link Почему я выбрал Jade
+        .content__article
+          .article
+            h2.article__title Самое важное в SASS
+            span.article__date 22 ноября 2016
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis debitis deserunt provident iste sint maxime, ducimus nulla laborum, eum voluptate voluptatum tempora consectetur minus nam fugit vel nesciunt pariatur animi eos, suscipit voluptatem molestias nostrum cupiditate deleniti. Enim magnam, harum nostrum, eum distinctio beatae officia temporibus quisquam, non consectetur cum?
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dicta animi nostrum voluptas consequuntur ex esse velit voluptate, corporis inventore! Repellendus similique fuga ullam repudiandae laudantium expedita, adipisci aperiam odit dolorem omnis vitae ex soluta labore dolore voluptas ipsam! Provident, cum. Neque officiis vero eum doloribus sunt veniam corrupti quos!
+          .article
+            h2.article__title Самое важное в SASS
+            span.article__date 22 ноября 2016
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis debitis deserunt provident iste sint maxime, ducimus nulla laborum, eum voluptate voluptatum tempora consectetur minus nam fugit vel nesciunt pariatur animi eos, suscipit voluptatem molestias nostrum cupiditate deleniti. Enim magnam, harum nostrum, eum distinctio beatae officia temporibus quisquam, non consectetur cum?
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dicta animi nostrum voluptas consequuntur ex esse velit voluptate, corporis inventore! Repellendus similique fuga ullam repudiandae laudantium expedita, adipisci aperiam odit dolorem omnis vitae ex soluta labore dolore voluptas ipsam! Provident, cum. Neque officiis vero eum doloribus sunt veniam corrupti quos!
+  footer.footer
+    .footer-row
+      .footer-menu
+        nav.menu
+          ul.menu-item
+            a(href="").menu-item-link Мои работы
+          ul.menu-item
+            a(href="").menu-item-link Обо мне
+          ul.menu-item
+            a(href="").menu-item-link Блог
+          ul.menu-item
+            a(href="").menu-item-link Авторизация
+      .footer-social
+        ul.social
+          li.social-item
+            a(href="").social-item-link vk
+          li.social-item
+            a(href="").social-item-link git
+          li.social-item
+            a(href="").social-item-link in
+    .footer-row
+      p.description
+        | Я веб-разработчик из Новосибирска, и этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. 
+      p.copy
+        | &copy; Пацура Александр | создано с любовью в LoftSchool | 2017
