@@ -4,42 +4,40 @@ block variables
   - var title = "Welcome"
 
 block content
-  header.section__header
-    .header__section
-      .authoriz
-        a.btn__authoriz(href="#") Авторизоваться
-    .user__block
-      .welcome__user
-        .user__image
-          img(src="assets/images/avatar.jpg", alt="Avatar").image__avatar
-        .user__info
-          h2.user__name
-            | Пацура Александр
-          p.description
-            | Личный сайт веб разработчика
-          .user__socials
-            ul.socials
-              li.socials__item
-                a.socials__item.socials__item_vk(href="#")
-                  svg(width="30" height="30").icon_sprites
-                    use(xlink:href="assets/images/sprites/sprite.svg#vk")
-              li.socials__item
-                a.socials__item.socials__item_git(href="#")
-                  svg(width="30" height="30").icon_sprites
-                    use(xlink:href="assets/images/sprites/sprite.svg#github")
-              li.socials__item
-                a.socials__item.socials__item_in(href="#")
-                  svg(width="30" height="30").icon_sprites
-                    use(xlink:href="assets/images/sprites/sprite.svg#in")
+  header.header.user
+    .user__authoriz
+      a.authoriz-btn(href="#") Авторизоваться
+    .user__welcome
+      .welcome__block
+        .user__avatar
+          img(src="assets/images/avatar.jpg", alt="User-avatar").user__img
+        .info__user
+          h2.user__name Пацура Александр
+          p.user__desc Личный сайт веб разработчика
+        .user__socials
+          ul.socials
+          -
+            var socials = [
+              ["vk", "https://vk.com/alexanderpatsura"],
+              ["github", "https://github.com/AlexandrPatsura"],
+              ["in", "https://www.linkedin.com/in/alexander-patsura-355a8b13b/"]
+            ]
+          each item in socials
+            li.socials__item
+              a.socials__link(href=`${item[1]}`, class=`socials__item_${item[0]}`, target="_blank")
+                svg(width="30" height="22").sprites_color
+                  use(xlink:href=`assets/images/sprites/sprite.svg#${item[0]}`)
         nav.user__menu
           ul.menu
+          -
+            var pages = [
+              ["works.html", "Мои работы"],
+              ["about.html", "Обо мне"],
+              ["blog.html", "Блог"],
+            ]
+          each page in pages
             li.menu__items
-              a.menu__items_link(href="works.html") Мои работы
-            li.menu__items
-              a.menu__items_link(href="about.html") Обо мне
-            li.menu__items
-              a.menu__items_link(href="blog.html") Блог
-    .footer__section
-      .user__copy
-        .copy__text
-          p © Пацура Александр | создано с любовью в LoftSchool | 2017
+              a.menu__items_link(href=`${page[0]}`) #{page[1]}
+    .user__footer
+      .footer__copyright
+        | &copy; Пацура Александр | создано с любовью в LoftSchool | 2017

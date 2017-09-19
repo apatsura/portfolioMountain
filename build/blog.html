@@ -8,21 +8,21 @@
   <title>Blog</title>
 </html>
 <body>
-  <div class="body__wrapper">
+  <div class="wrapper">
     <header class="section__header blog">
       <div class="container">
         <div class="header__menu">
           <div class="header__social">
             <ul class="socials">
-              <li class="socials__item"><a class="socials__item socials__item_vk" href="#">
+              <li class="socials__item"><a class="socials__link socials__item_vk" href="#">
                   <svg class="icon_sprites" width="30" height="30">
                     <use xlink:href="assets/images/sprites/sprite.svg#vk"></use>
                   </svg></a></li>
-              <li class="socials__item"><a class="socials__item socials__item_git" href="#">
+              <li class="socials__item"><a class="socials__link socials__item_github" href="#">
                   <svg class="icon_sprites" width="30" height="30">
                     <use xlink:href="assets/images/sprites/sprite.svg#github"></use>
                   </svg></a></li>
-              <li class="socials__item"><a class="socials__item socials__item_in" href="#">
+              <li class="socials__item"><a class="socials__link socials__item_in" href="#">
                   <svg class="icon_sprites" width="30" height="30">
                     <use xlink:href="assets/images/sprites/sprite.svg#in"></use>
                   </svg></a></li>
@@ -88,24 +88,35 @@
       </div>
     </section>
     <footer class="footer">
-      <div class="footer-row">
-        <div class="footer-menu">
-          <nav class="menu">
-            <ul class="menu-item"><a class="menu-item-link" href="">Мои работы</a></ul>
-            <ul class="menu-item"><a class="menu-item-link" href="">Обо мне</a></ul>
-            <ul class="menu-item"><a class="menu-item-link" href="">Блог</a></ul>
-            <ul class="menu-item"><a class="menu-item-link" href="">Авторизация</a></ul>
+      <div class="footer__row">
+        <div class="footer__menu">
+          <nav class="main__menu">
+            <ul class="menu">
+              <li class="menu__items"><a class="menu__items_link" href="works.html">Мои работы</a></li>
+              <li class="menu__items"><a class="menu__items_link" href="about.html">Обо мне</a></li>
+              <li class="menu__items"><a class="menu__items_link" href="blog.html">Блог</a></li>
+              <li class="menu__items"><a class="menu__items_link" href="index.html">Авторизация</a></li>
+            </ul>
           </nav>
         </div>
-        <div class="footer-social">
-          <ul class="social">
-            <li class="social-item"><a class="social-item-link" href="">vk</a></li>
-            <li class="social-item"><a class="social-item-link" href="">git</a></li>
-            <li class="social-item"><a class="social-item-link" href="">in</a></li>
+        <div class="footer__social">
+          <ul class="socials">
+            <li class="socials__item"><a class="socials__item socials__item_vk" href="#">
+                <svg class="icon_sprites" width="40" height="40">
+                  <use xlink:href="assets/images/sprites/sprite.svg#vk"></use>
+                </svg></a></li>
+            <li class="socials__item"><a class="socials__item socials__item_git" href="#">
+                <svg class="icon_sprites" width="30" height="40">
+                  <use xlink:href="assets/images/sprites/sprite.svg#github"></use>
+                </svg></a></li>
+            <li class="socials__item"><a class="socials__item socials__item_in" href="#">
+                <svg class="icon_sprites" width="30" height="45">
+                  <use xlink:href="assets/images/sprites/sprite.svg#in"></use>
+                </svg></a></li>
           </ul>
         </div>
       </div>
-      <div class="footer-row">
+      <div class="footer__row">
         <p class="description">Я веб-разработчик из Новосибирска, и этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. </p>
         <p class="copy">&copy; Пацура Александр | создано с любовью в LoftSchool | 2017</p>
       </div>

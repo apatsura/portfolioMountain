@@ -8,49 +8,41 @@
   <title>Welcome</title>
 </html>
 <body>
-  <div class="body__wrapper">
-    <header class="section__header">
-      <div class="header__section">
-        <div class="authoriz"><a class="btn__authoriz" href="#">Авторизоваться</a></div>
-      </div>
-      <div class="user__block">
-        <div class="welcome__user">
-          <div class="user__image"><img class="image__avatar" src="assets/images/avatar.jpg" alt="Avatar"></div>
-          <div class="user__info">
+  <div class="wrapper">
+    <header class="header user">
+      <div class="user__authoriz"><a class="authoriz-btn" href="#">Авторизоваться</a></div>
+      <div class="user__welcome">
+        <div class="welcome__block">
+          <div class="user__avatar"><img class="user__img" src="assets/images/avatar.jpg" alt="User-avatar"></div>
+          <div class="info__user">
             <h2 class="user__name">Пацура Александр</h2>
-            <p class="description">Личный сайт веб разработчика</p>
-            <div class="user__socials">
-              <ul class="socials">
-                <li class="socials__item"><a class="socials__item socials__item_vk" href="#">
-                    <svg class="icon_sprites" width="30" height="30">
-                      <use xlink:href="assets/images/sprites/sprite.svg#vk"></use>
-                    </svg></a></li>
-                <li class="socials__item"><a class="socials__item socials__item_git" href="#">
-                    <svg class="icon_sprites" width="30" height="30">
-                      <use xlink:href="assets/images/sprites/sprite.svg#github"></use>
-                    </svg></a></li>
-                <li class="socials__item"><a class="socials__item socials__item_in" href="#">
-                    <svg class="icon_sprites" width="30" height="30">
-                      <use xlink:href="assets/images/sprites/sprite.svg#in"></use>
-                    </svg></a></li>
-              </ul>
-            </div>
+            <p class="user__desc">Личный сайт веб разработчика</p>
+          </div>
+          <div class="user__socials">
+            <ul class="socials"></ul>
+            <li class="socials__item"><a class="socials__link socials__item_vk" href="https://vk.com/alexanderpatsura" target="_blank">
+                <svg class="sprites_color" width="30" height="22">
+                  <use xlink:href="assets/images/sprites/sprite.svg#vk"></use>
+                </svg></a></li>
+            <li class="socials__item"><a class="socials__link socials__item_github" href="https://github.com/AlexandrPatsura" target="_blank">
+                <svg class="sprites_color" width="30" height="22">
+                  <use xlink:href="assets/images/sprites/sprite.svg#github"></use>
+                </svg></a></li>
+            <li class="socials__item"><a class="socials__link socials__item_in" href="https://www.linkedin.com/in/alexander-patsura-355a8b13b/" target="_blank">
+                <svg class="sprites_color" width="30" height="22">
+                  <use xlink:href="assets/images/sprites/sprite.svg#in"></use>
+                </svg></a></li>
           </div>
           <nav class="user__menu">
-            <ul class="menu">
-              <li class="menu__items"><a class="menu__items_link" href="works.html">Мои работы</a></li>
-              <li class="menu__items"><a class="menu__items_link" href="about.html">Обо мне</a></li>
-              <li class="menu__items"><a class="menu__items_link" href="blog.html">Блог</a></li>
-            </ul>
+            <ul class="menu"></ul>
+            <li class="menu__items"><a class="menu__items_link" href="works.html">Мои работы</a></li>
+            <li class="menu__items"><a class="menu__items_link" href="about.html">Обо мне</a></li>
+            <li class="menu__items"><a class="menu__items_link" href="blog.html">Блог</a></li>
           </nav>
         </div>
       </div>
-      <div class="footer__section">
-        <div class="user__copy">
-          <div class="copy__text">
-            <p>© Пацура Александр | создано с любовью в LoftSchool | 2017</p>
-          </div>
-        </div>
+      <div class="user__footer">
+        <div class="footer__copyright">&copy; Пацура Александр | создано с любовью в LoftSchool | 2017</div>
       </div>
     </header>
   </div>
