@@ -22,11 +22,10 @@
   height: 100vh;
 }
 // authorization
-.user__authoriz {
+.user__authoriz-btn {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  // padding-top: 33px;
   padding: 0 100px;
   min-height: 115px;
   box-sizing: border-box;
@@ -49,21 +48,53 @@
     transition: 0.5s ease;
   }
 }
-
 // welcome block
-.user__welcome {
+.user__card {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0 10px;
+  min-height: 395px;
   flex-grow: 1;
+  position: relative;
 }
 
-.welcome__block {
+.welcome,
+.authoriz {
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  // padding: 0 10px;
+  // min-height: 395px;
+  // flex-grow: 1;
+  position: absolute;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  // top: 0;
+  // left: 0;
+  // width: 100%;
+  // height: 100%;
+  backface-visibility: hidden;
+  transition: transform 1s;
+}
+
+.authoriz {
+  transform: rotateY(-180deg);
+}
+
+.user__card.effect__click.flipped .welcome {
+  transform: rotateY(-180deg);
+}
+
+.user__card.effect__click.flipped .authoriz {
+  transform: rotateY(0);
+}
+
+.user__card-block {
   width: 380px;
   max-width: 380px;
   min-width: 300px;
-  min-height: 395px;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.85);
   border-radius: 10px;
