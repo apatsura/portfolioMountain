@@ -1,0 +1,27 @@
+.footer {
+  background-color: rgba(55, 62, 66, 0.85);
+  font-family: $robotoLight;
+  color: #ffffff;
+}
+.footer__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 73px;
+  padding: 0 30px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.sprites_footer {
+  padding: 0 10px 0 0;
+}
+.user__footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: $robotoLight;
+  color: #ffffff;
+  min-height: 95px;
+}
+.text-opacity {
+  opacity: .5;
+}

@@ -1,0 +1,90 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.user {
+  height: 100vh;
+}
+
+.page__title {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  margin-left: -600px;
+}
+
+.section-title__picture {
+  fill: rgba(255, 255, 255, 0.06);
+}
+
+// welcome block
+.user__card {
+  display: flex;
+  justify-content: center;
+  padding: 0 10px;
+  min-height: 395px;
+  flex-grow: 1;
+  position: relative;
+}
+
+.card_align {
+  align-items: center;  
+}
+
+.welcome,
+.authoriz {
+  position: absolute;
+  backface-visibility: hidden;
+  transition: transform 1s;
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+.authoriz {
+  transform: rotateY(-180deg);
+}
+
+.user__card.effect__click.flipped .welcome {
+  transform: rotateY(-180deg);
+}
+
+.user__card.effect__click.flipped .authoriz {
+  transform: rotateY(0);
+}
+
+.user__card-block {
+  width: 380px;
+  // max-width: 380px;
+  min-width: 300px;
+  text-align: center;
+  border-radius: 10px;
+  box-sizing: border-box;
+  font-family: $robotoRegular;
+}
+// image-avatar
+.user__avatar {
+  padding: 40px 0 38px;
+}
+
+.user__img {
+  width: 145px;
+  height: 145px;
+  border-radius: 50%;
+}
+// info-user
+.info_color {
+  color: #ffffff;
+}
+.user__name {
+  font-family: $robotoMedium;
+  font-size: 1.75rem;
+  font-weight: 500;
+  margin: 0 0 8px;
+}
+
+.user__desc {
+  font-family: $robotoRegular;
+  margin: 0;
+}

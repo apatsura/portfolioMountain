@@ -4,93 +4,76 @@ block variables
   - var title = "About"
 
 block content
-  header.section__header
-    .container
-      .header__menu
-        .header__social
-          ul.socials
+  header.header.about
+    .menu__row
+      .header__socials
+        ul.socials
+          -
+            var socials = [
+              ["vk", "https://vk.com/alexanderpatsura"],
+              ["github", "https://github.com/AlexandrPatsura"],
+              ["in", "https://www.linkedin.com/in/alexander-patsura-355a8b13b/"]
+            ]
+          each item in socials
             li.socials__item
-              a.socials__item.socials__item_vk(href="#")
-                svg(width="30" height="30").icon_sprites
-                  use(xlink:href="assets/images/sprites/sprite.svg#vk")
-            li.socials__item
-              a.socials__item.socials__item_git(href="#")
-                svg(width="30" height="30").icon_sprites
-                  use(xlink:href="assets/images/sprites/sprite.svg#github")
-            li.socials__item
-              a.socials__item.socials__item_in(href="#")
-                svg(width="30" height="30").icon_sprites
-                  use(xlink:href="assets/images/sprites/sprite.svg#in")
-        .hamburger
-          svg(width="45" height="35").icon_sprites
-            use(xlink:href="assets/images/sprites/sprite.svg#hamburger")
-          nav.main__menu
-            ul.menu
-              li.menu__items
-                a.menu__items_link(href="works.html") Мои работы
-              li.menu__items
-                a.menu__items_link(href="about.html") Обо мне
-              li.menu__items
-                a.menu__items_link(href="blog.html") Блог
-    .user__image
-      img(src="assets/images/avatar.jpg", alt="Avatar").image__avatar
-    .user__info
-      h2.user__name
-        | Пацура Александр
-      p.description
-        | Личный сайт веб разработчика
-
-
-
-  ul.wrap
-    li.item
-      svg.circles(viewbox='0 0 110 110')
-        circle.circle__first(r='45', cx='50%', cy='50%', fill='none')
-        circle.circle__second.circle-25(r='45', cx='50%', cy='50%', transform='rotate(-90 55 55)')
-      span.item__title HTML & CSS
-    li.item
-      svg.circles(viewbox='0 0 110 110')
-        circle.circle__first(r='45', cx='50%', cy='50%', fill='none')
-        circle.circle__second.circle-45(r='45', cx='50%', cy='50%', transform='rotate(-90 55 55)')
-      span.item__title javaScript
-    li.item
-      svg.circles(viewbox='0 0 110 110')
-        circle.circle__first(r='45', cx='50%', cy='50%', fill='none')
-        circle.circle__second.circle-75(r='45', cx='50%', cy='50%', transform='rotate(-90 55 55)')
-      span.item__title Node.js
-
-
+              a.socials__link(href=`${item[1]}`, class=`socials__item_${item[0]}`, target="_blank")
+                svg(width="30" height="22").sprites
+                  use(xlink:href=`assets/images/sprites/sprite.svg#${item[0]}`)
+      .toggle-menu
+        span.sandwich
+          span.top
+          span.center
+          span.bottom
+      nav.menu_full
+        ul.menu.main__menu
+          -
+            var pages = [
+              ["works.html", "Мои работы"],
+              ["about.html", "Обо мне"],
+              ["blog.html", "Блог"],
+              ["index.html", "Авторизация"],
+            ]
+          each page in pages
+            li.menu__items.items_full
+              a.menu__items_link.link_full.title(href=`${page[0]}`) #{page[1]}
+    .user__card.effect__click
+      .user__card-block
+        .welcome__block
+          .user__avatar
+            img(src="assets/images/avatar.jpg", alt="User-avatar").user__img
+          .info__user.info_color
+            h2.user__name Пацура Александр
+            p.user__desc Личный сайт веб разработчика
 
   footer.footer
     .footer__row
-      .footer__menu
-        nav.main__menu
-          ul.menu
-            li.menu__items
-              a.menu__items_link(href="works.html") Мои работы
-            li.menu__items
-              a.menu__items_link(href="about.html") Обо мне
-            li.menu__items
-              a.menu__items_link(href="blog.html") Блог
-            li.menu__items
-              a.menu__items_link(href="blog.html") Авторизация
-      .footer__social
-        ul.socials
-            li.socials__item
-              a.socials__item.socials__item_vk(href="#")
-                svg(width="40" height="40").icon_sprites
-                  use(xlink:href="assets/images/sprites/sprite.svg#vk")
-            li.socials__item
-              a.socials__item.socials__item_git(href="#")
-                svg(width="30" height="40").icon_sprites
-                  use(xlink:href="assets/images/sprites/sprite.svg#github")
-            li.socials__item
-              a.socials__item.socials__item_in(href="#")
-                svg(width="30" height="45").icon_sprites
-                  use(xlink:href="assets/images/sprites/sprite.svg#in")
-                  //- use(xlink:href="assets/images/sprites/sprite.svg#github")
+      nav
+        ul.menu.footer__menu
+          -
+            var pages = [
+              ["works.html", "Мои работы"],
+              ["about.html", "Обо мне"],
+              ["blog.html", "Блог"],
+              ["index.html", "Авторизация"]
+            ]
+          each page in pages
+            li.menu__items.item_footer
+              a.menu__items_link(href=`${page[0]}`) #{page[1]}
+      .footer__socials
+        ul.socials.socials__rounded
+          -
+            var socials = [
+              ["vk_round", "https://vk.com/alexanderpatsura"],
+              ["github_round", "https://github.com/AlexandrPatsura"],
+              ["in_round", "https://www.linkedin.com/in/alexander-patsura-355a8b13b/"]
+            ]
+          each item in socials
+            li.socials__item.sprites_footer
+              a.socials__link(href=`${item[1]}`, class=`socials__item_${item[0]}`, target="_blank")
+                svg(width="36" height="36" viewbox="0 0 50 50").sprites
+                  use(xlink:href=`assets/images/sprites/sprite.svg#${item[0]}`)
     .footer__row
-      p.description
-        | Я веб-разработчик из Новосибирска, и этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. 
-      p.copy
-        | &copy; Пацура Александр | создано с любовью в LoftSchool | 2017
+      .footer__text.text-content
+          | Я веб-разработчик из Новосибирска, и этот сайт я сделал в рамках<br> обучения в Школе онлайн образования LoftSchool. 
+      .footer__copyright
+          | &copy; Пацура Александр | создано с любовью в LoftSchool | 2017

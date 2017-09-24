@@ -1,0 +1,146 @@
+extends ../template
+
+block variables
+  - var title = "My works"
+
+block content
+  header.header.works
+    .menu__row
+      .header__socials
+        ul.socials
+          -
+            var socials = [
+              ["vk", "https://vk.com/alexanderpatsura"],
+              ["github", "https://github.com/AlexandrPatsura"],
+              ["in", "https://www.linkedin.com/in/alexander-patsura-355a8b13b/"]
+            ]
+          each item in socials
+            li.socials__item
+              a.socials__link(href=`${item[1]}`, class=`socials__item_${item[0]}`, target="_blank")
+                svg(width="30" height="22").sprites
+                  use(xlink:href=`assets/images/sprites/sprite.svg#${item[0]}`)
+      .toggle-menu
+        span.sandwich
+          span.top
+          span.center
+          span.bottom
+      nav.menu_full
+        ul.menu.main__menu
+          -
+            var pages = [
+              ["works.html", "Мои работы"],
+              ["about.html", "Обо мне"],
+              ["blog.html", "Блог"],
+              ["index.html", "Авторизация"],
+            ]
+          each page in pages
+            li.menu__items.items_full
+              a.menu__items_link.link_full.title(href=`${page[0]}`) #{page[1]}
+    .page__title
+      .section-title
+        svg(width="1200" height="400").section-title__picture
+          use(xlink:href="assets/images/sprites/sprite.svg#portfolio_header")
+    .user__card.effect__click
+      .user__card-block
+        .welcome__block
+          .user__avatar
+            img(src="assets/images/avatar.jpg", alt="User-avatar").user__img
+          .info__user.info_color
+            h2.user__name Пацура Александр
+            p.user__desc Личный сайт веб разработчика
+    
+  
+  //- ///////////////////////////////////////////////////////////////////////////////////////////
+
+  .section.about
+    .section__triangle
+      svg.about__triangle_left(xmlns='http://www.w3.org/2000/svg', width="100%" height="153" viewbox='0 0 1000 85', preserveaspectratio='none')
+        polygon.left(points='0,0 0,86 1030,86 1030,86')
+      svg.about__triangle_right(xmlns='http://www.w3.org/2000/svg', width="100%" height="153" viewbox='0 0 1000 85', preserveaspectratio='none')
+        polygon.right(points='1000,0 1000,86 -030,86 -030,86')
+    .about__column
+      .about__left-title
+        .about__title
+          .block-title Обо мне
+        .about__left-content
+          .user-description
+            .user-description__image
+              .user-description__avtar
+            .user-description__title
+              .subtitle Кто я
+            .user-description__text.text-content
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam ad voluptas, distinctio dolor aliquid culpa consectetur veniam, debitis quidem molestiae?
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam ad voluptas, distinctio dolor aliquid culpa consectetur veniam, debitis quidem molestiae?
+      .about__right
+      .about__right-title
+        .subtitle Чем я могу вам быть полезен
+      .about__right-description.text-content
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa corporis fuga, aperiam quos provident cum impedit eos inventore! Harum, at.
+      .about__right-content
+        ul.tech-list
+          each skill in ["FrontEnd", "BackEnd", "WorkFlow"]
+            li.tech-list__item
+              .tech-row
+                .tech-row__title= skill
+                ul.skills-list
+                  li.skills-list__item
+                   .skill
+                     svg.skill__circle
+                     .skill__title
+ 
+  .section.map
+    .google-map
+      .map__data
+        .contacts
+          .contacts__title
+            .subtitle Контакты
+          ul.contacts__list
+            -
+              var contacts = [
+                ["skype", "alexandrpatsura"],
+                ["mail", "alexandrpatsura@gmail.com"],
+                ["phone", "+38 093 99 19 612"],
+                ["geo", "г. Запорожье"]
+              ]
+            each item in contacts
+              li.contacts__item
+                .contacts-row
+                  .contacts-row__icon #{item[0]}
+                  .contacts-row__content #{item[1]}
+
+  
+  //- ///////////////////////////////////////////////////////////////////////////////////////////
+  
+  
+  footer.footer
+    .footer__row
+      nav
+        ul.menu.footer__menu
+          -
+            var pages = [
+              ["works.html", "Мои работы"],
+              ["about.html", "Обо мне"],
+              ["blog.html", "Блог"],
+              ["index.html", "Авторизация"]
+            ]
+          each page in pages
+            li.menu__items.item_footer
+              a.menu__items_link(href=`${page[0]}`) #{page[1]}
+      .footer__socials
+        ul.socials.socials__rounded
+          -
+            var socials = [
+              ["vk_round", "https://vk.com/alexanderpatsura"],
+              ["github_round", "https://github.com/AlexandrPatsura"],
+              ["in_round", "https://www.linkedin.com/in/alexander-patsura-355a8b13b/"]
+            ]
+          each item in socials
+            li.socials__item.sprites_footer
+              a.socials__link(href=`${item[1]}`, class=`socials__item_${item[0]}`, target="_blank")
+                svg(width="36" height="36" viewbox="0 0 50 50").sprites
+                  use(xlink:href=`assets/images/sprites/sprite.svg#${item[0]}`)
+    .footer__row
+      .footer__text.text-content.text-opacity
+          | Я веб-разработчик из Новосибирска, и этот сайт я сделал в рамках<br> обучения в Школе онлайн образования LoftSchool.
+      .footer__copyright.text-opacity
+          | &copy; Пацура Александр | создано с любовью в LoftSchool | 2017

@@ -1,0 +1,180 @@
+// .user__menu {
+//   display: flex;
+// }
+
+.menu__row {
+  display: flex;
+  justify-content: space-between;
+  padding: 28px 30px;
+}
+
+.menu {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.user__menu {
+  display: flex;
+  // width: 100%;
+}
+
+.menu__items {
+  list-style: none;
+}
+
+.items_index {
+  width: 100%;
+  list-style: none;
+  border-right: 2px solid #dee3e7;
+  overflow: hidden;
+  &:first-child {
+    border-radius: 0 0 0 10px;
+  }
+  &:last-child {
+    border-radius: 0 0 10px 0;
+    border-right: none;
+  }
+}
+
+.menu__items_link {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  transition: .5s ease;
+  
+  &:hover {
+    transition: .5s ease;
+  }
+}
+
+.link_index {
+  background-color: rgba(0, 191, 165, 0.5);
+  padding: 14px 0;
+  font-family: $robotoRegular;
+  &:hover {
+    background-color: #009688;
+  }
+}
+
+/////////////////////////// toggle menu ///////////////////////////////////////
+
+@keyframes show-tg-menu {
+  100% {
+    width: 30px;
+    opacity: 1;
+  }
+  50% {
+    width: 15px;
+    opacity: 0.5;
+  }
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+}
+@keyframes hide-tg-menu {
+  0% {
+    width: 30px;
+    opacity: 1;
+  }
+  50% {
+    width: 15px;
+    opacity: 0.5;
+  }
+  100% {
+    width: 0;
+    opacity: 0;
+  }
+}
+.toggle-menu {
+  z-index: 10;
+}
+.toggle-menu .sandwich {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 40px;
+  height: 35px;
+}
+.toggle-menu .sandwich span {
+  display: block;
+  position: relative;
+  width: 40px;
+  height: 5px;
+  background: white;
+  border: none;
+  border-radius: 4px;
+  transition: transform 0.5s, top 0.2s;
+  /* transition-delay: 0.2s, 0s; */
+}
+.toggle-menu .sandwich .center {
+  animation-name: show-tg-menu;
+  animation-duration: 0.3s;
+}
+.toggle-menu .active .top {
+  top: 15px;
+  transform: rotate(135deg);
+}
+.toggle-menu .active .center {
+  opacity: 0;
+  animation-name: hide-tg-menu;
+  animation-duration: 0.4s;
+}
+.toggle-menu .active .bottom {
+  top: -15px;
+  transform: rotate(-135deg);
+}
+.menu_full {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 191, 165, 0.87);
+  top: 0;
+  left: 0;
+  z-index: 5;
+  text-align: center;
+}
+
+.items_full {
+  width: 100%;
+  &:hover {
+    background-color: rgba(0, 191, 165, 0.5);
+  }
+}
+
+.link_full {
+  display: inline-block;
+  color: #fff;
+  transition: ease 0.4s;
+  &:hover {
+    transition: ease 0.4s;
+  }
+}
+
+.link_full.title {
+
+  &::before {
+    left: -40px;
+  }
+
+  &::after {
+    right: -35px;
+  }
+}
+
+
+//////////// footer menu //////////////////////////
+.footer__menu {
+  display: flex;
+  font-family: $robotoMedium;
+}
+.item_footer {
+  padding-right: 40px;
+  &::last-child {
+    padding-right: 0;
+  }
+}
