@@ -31,7 +31,7 @@
 }
 
 .card_align {
-  align-items: center;  
+  align-items: center;
 }
 
 .welcome,
@@ -79,7 +79,7 @@
 }
 .user__name {
   font-family: $robotoMedium;
-  font-size: 1.75rem;
+  font-size: 35px;
   font-weight: 500;
   margin: 0 0 8px;
 }
@@ -87,4 +87,9 @@
 .user__desc {
   font-family: $robotoRegular;
   margin: 0;
+}
+
+.user__scroll {
+  display: flex;
+  justify-content: center;
 }

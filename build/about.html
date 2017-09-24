@@ -38,6 +38,13 @@
           </ul>
         </nav>
       </div>
+      <div class="page__title">
+        <div class="section-title">
+          <svg class="section-title__picture" width="1200" height="400">
+            <use xlink:href="assets/images/sprites/sprite.svg#portfolio_header"></use>
+          </svg>
+        </div>
+      </div>
       <div class="user__card effect__click">
         <div class="user__card-block">
           <div class="welcome__block">
@@ -49,7 +56,130 @@
           </div>
         </div>
       </div>
+      <div class="user__scroll"><a class="arrow-down" href="">
+          <svg class="sprites" width="30" height="22">
+            <use xlink:href="assets/images/sprites/sprite.svg#arrow_down"></use>
+          </svg></a></div>
     </header>
+    <div class="section__triangle">
+      <svg class="about__triangle_left" xmlns="http://www.w3.org/2000/svg" width="100%" height="153" viewbox="0 0 1000 85" preserveaspectratio="none">
+        <polygon class="left" points="0,0 0,86 1030,86 1030,86"></polygon>
+      </svg>
+      <svg class="about__triangle_right" xmlns="http://www.w3.org/2000/svg" width="100%" height="153" viewbox="0 0 1000 85" preserveaspectratio="none">
+        <polygon class="right" points="1000,0 1000,86 -030,86 -030,86"></polygon>
+      </svg>
+    </div>
+    <div class="section about">
+      <div class="about__column about__left">
+        <div class="about__left-title">
+          <div class="about__title">
+            <svg class="about-title__picture" width="350" height="120">
+              <use xlink:href="assets/images/sprites/sprite.svg#about_header"></use>
+            </svg>
+            <div class="title title-color">Обо мне</div>
+          </div>
+          <div class="about__left-content">
+            <div class="user-description">
+              <div class="user-description__image"><img class="user-description__avatar" src="assets/images/avatar.jpg" alt="User-avatar"></div>
+              <div class="user-description__title">
+                <div class="block-subtitle">Кто я</div>
+              </div>
+              <div class="user-description__text text-content">
+                <p>Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.</p>
+                <p>Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about__column about__right">
+        <div class="about__right-title user-description__title">
+          <div class="block-subtitle">Чем я могу вам<br> быть полезен</div>
+        </div>
+        <div class="about__right-description text-content">
+          <p>Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачина Backend. Но давайте по порядку.</p>
+        </div>
+        <div class="about__right-content">
+          <ul class="tech-list">
+            <li class="tech-list__item">
+              <div class="tech-row">
+                <div class="tech-row__title">FrontEnd</div>
+                <ul class="skills-list">
+                  <li class="skills-list__item"></li>
+                  <div class="skill">
+                    <svg class="skill__circle"></svg>
+                    <div class="skill__title"></div>
+                  </div>
+                </ul>
+              </div>
+            </li>
+            <li class="tech-list__item">
+              <div class="tech-row">
+                <div class="tech-row__title">BackEnd</div>
+                <ul class="skills-list">
+                  <li class="skills-list__item"></li>
+                  <div class="skill">
+                    <svg class="skill__circle"></svg>
+                    <div class="skill__title"></div>
+                  </div>
+                </ul>
+              </div>
+            </li>
+            <li class="tech-list__item">
+              <div class="tech-row">
+                <div class="tech-row__title">WorkFlow</div>
+                <ul class="skills-list">
+                  <li class="skills-list__item"></li>
+                  <div class="skill">
+                    <svg class="skill__circle"></svg>
+                    <div class="skill__title"></div>
+                  </div>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="section map">
+      <div class="google-map">
+        <h3>My Google Maps Demo</h3>
+        <div id="map"></div>
+        <div class="map__data">
+          <div class="contacts">
+            <div class="contacts__title">
+              <div class="subtitle">Контакты</div>
+            </div>
+            <ul class="contacts__list">
+              <li class="contacts__item">
+                <div class="contacts-row">
+                  <div class="contacts-row__icon">skype</div>
+                  <div class="contacts-row__content">alexandrpatsura</div>
+                </div>
+              </li>
+              <li class="contacts__item">
+                <div class="contacts-row">
+                  <div class="contacts-row__icon">mail</div>
+                  <div class="contacts-row__content">alexandrpatsura@gmail.com</div>
+                </div>
+              </li>
+              <li class="contacts__item">
+                <div class="contacts-row">
+                  <div class="contacts-row__icon">phone</div>
+                  <div class="contacts-row__content">+38 093 99 19 612</div>
+                </div>
+              </li>
+              <li class="contacts__item">
+                <div class="contacts-row">
+                  <div class="contacts-row__icon">geo</div>
+                  <div class="contacts-row__content">г. Запорожье</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
     <footer class="footer">
       <div class="footer__row">
         <nav>
@@ -85,4 +215,5 @@
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="assets/scripts/bundle.js"></script>
+  <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2_VJSqqef31yShJu6MnuTYe88TENum5U&amp;callback=initMap"></script>
 </body>

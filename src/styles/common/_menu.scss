@@ -61,12 +61,20 @@
 
 @keyframes show-tg-menu {
   100% {
-    width: 30px;
+    width: 40px;
     opacity: 1;
   }
+  75% {
+    width: 30px;
+    opacity: 0.75;
+  }
   50% {
-    width: 15px;
-    opacity: 0.5;
+    width: 20px;
+    opacity: 0.4;
+  }
+  25% {
+    width: 10px;
+    opacity: 0.1;
   }
   0% {
     width: 0;
@@ -75,12 +83,20 @@
 }
 @keyframes hide-tg-menu {
   0% {
-    width: 30px;
+    width: 40px;
     opacity: 1;
   }
+  25% {
+    width: 30px;
+    opacity: 0.75;
+  }
   50% {
-    width: 15px;
-    opacity: 0.5;
+    width: 20px;
+    opacity: 0.4;
+  }
+  75% {
+    width: 10px;
+    opacity: 0.1;
   }
   100% {
     width: 0;
@@ -119,7 +135,7 @@
 .toggle-menu .active .center {
   opacity: 0;
   animation-name: hide-tg-menu;
-  animation-duration: 0.4s;
+  animation-duration: 0.3s;
 }
 .toggle-menu .active .bottom {
   top: -15px;

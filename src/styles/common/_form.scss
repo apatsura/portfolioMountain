@@ -6,12 +6,13 @@
   font-weight: 400;
   margin: 0;
   padding: 33px 0;
+  display: inline-block;
   
   &::before {
     content: "";
     position: absolute;
     top: 50px;
-    left: 50px;
+    left: -40px;
     width: 22px;
     height: 5px;
     background-color: $grey;
@@ -21,7 +22,7 @@
     content: "";
     position: absolute;
     top: 50px;
-    right: 52px;
+    right: -40px;
     width: 22px;
     height: 5px;
     background-color: $grey;
