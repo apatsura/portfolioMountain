@@ -1,10 +1,9 @@
 (function() {
-  
+  // card
   var cards = document.querySelectorAll(".authoriz-btn");
-  for ( var i = 0, len = cards.length; i < len; i++ ) {
+  for (var i = 0, len = cards.length; i < len; i++) {
     var card = cards[i];
     clickListener();
-    
   }
   
   function clickListener() {
@@ -16,21 +15,24 @@
   }
   
   // toggle menu
-  
   $(".toggle-menu").click(function() {
     $(".sandwich").toggleClass("active");
+    if($("body").css("overflow") === "visible") {
+      $("body").css("overflow", "hidden");
+    } else {
+      $("body").css("overflow", "visible");
+    }
   });
   
   $(".toggle-menu").click(function() {
     if ($(".menu_full").is(":visible")) {
-      // $(".menu_full").fadeOut(600);
       $(".menu_full").css("display", "none");
     } else {
-      // $(".menu_full").fadeIn(600);
       $(".menu_full").css("display", "flex");
     }
   });
-  
+
+  // google map
   function initMap() {
     var myGeo = {
       zoom: 15,
@@ -89,11 +91,3 @@
   }
   
 })();
-
-
-
-// loader
-// $(window).load(function() { 
-//   $(".loader-inner").fadeOut(); 
-//   $(".loader").delay(400).fadeOut("slow"); 
-// });

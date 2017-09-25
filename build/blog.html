@@ -8,118 +8,116 @@
   <link rel="stylesheet" href="assets/styles/app.min.css">
   <title>Blog</title>
 </html>
-<body>
+<body onload="map()">
   <div class="wrapper">
-    <header class="header blog">
-      <div class="container">
-        <div class="header__menu">
-          <div class="header__social">
-            <ul class="socials">
-              <li class="socials__item"><a class="socials__link socials__item_vk" href="#">
-                  <svg class="icon_sprites" width="30" height="30">
-                    <use xlink:href="assets/images/sprites/sprite.svg#vk"></use>
-                  </svg></a></li>
-              <li class="socials__item"><a class="socials__link socials__item_github" href="#">
-                  <svg class="icon_sprites" width="30" height="30">
-                    <use xlink:href="assets/images/sprites/sprite.svg#github"></use>
-                  </svg></a></li>
-              <li class="socials__item"><a class="socials__link socials__item_in" href="#">
-                  <svg class="icon_sprites" width="30" height="30">
-                    <use xlink:href="assets/images/sprites/sprite.svg#in"></use>
-                  </svg></a></li>
-            </ul>
-          </div>
-          <div class="hamburger">
-            <svg class="icon_sprites" width="45" height="35">
-              <use xlink:href="assets/images/sprites/sprite.svg#hamburger"></use>
-            </svg>
-            <nav class="main__menu">
-              <ul class="menu">
-                <li class="menu__items"><a class="menu__items_link" href="works.html">Мои работы</a></li>
-                <li class="menu__items"><a class="menu__items_link" href="about.html">Обо мне</a></li>
-                <li class="menu__items"><a class="menu__items_link" href="blog.html">Блог</a></li>
-              </ul>
-            </nav>
-          </div>
+    <header class="header about">
+      <div class="menu__row">
+        <div class="header__socials">
+          <ul class="socials">
+            <li class="socials__item"><a class="socials__link socials__item_vk" href="https://vk.com/alexanderpatsura" target="_blank">
+                <svg class="sprites" width="30" height="22">
+                  <use xlink:href="assets/images/sprites/sprite.svg#vk"></use>
+                </svg></a></li>
+            <li class="socials__item"><a class="socials__link socials__item_github" href="https://github.com/AlexandrPatsura" target="_blank">
+                <svg class="sprites" width="30" height="22">
+                  <use xlink:href="assets/images/sprites/sprite.svg#github"></use>
+                </svg></a></li>
+            <li class="socials__item"><a class="socials__link socials__item_in" href="https://www.linkedin.com/in/alexander-patsura-355a8b13b/" target="_blank">
+                <svg class="sprites" width="30" height="22">
+                  <use xlink:href="assets/images/sprites/sprite.svg#in"></use>
+                </svg></a></li>
+          </ul>
         </div>
+        <div class="toggle-menu"><span class="sandwich"><span class="top"></span><span class="center"></span><span class="bottom"></span></span></div>
+        <nav class="menu_full">
+          <ul class="menu main__menu">
+            <li class="menu__items items_full"><a class="menu__items_link link_full title" href="works.html">Мои работы</a></li>
+            <li class="menu__items items_full"><a class="menu__items_link link_full title" href="about.html">Обо мне</a></li>
+            <li class="menu__items items_full"><a class="menu__items_link link_full title" href="blog.html">Блог</a></li>
+            <li class="menu__items items_full"><a class="menu__items_link link_full title" href="index.html">Авторизация</a></li>
+          </ul>
+        </nav>
       </div>
-      <div class="section__user">
-        <div class="user__image"><img class="image__avatar" src="assets/images/avatar.jpg" alt="Avatar"></div>
-        <div class="section__title">
-          <h1 class="title">Блог<span class="title__bg">
-              <svg class="icon_sprites">
+      <div class="user__card effect__click">
+        <div class="user__card-block">
+          <div class="welcome__block">
+            <div class="user__avatar"><img class="user__img" src="assets/images/avatar.jpg" alt="User-avatar"></div>
+            <div class="info__user info_color"></div>
+            <div class="block__title">
+              <svg class="block-title__picture" width="320" height="250">
                 <use xlink:href="assets/images/sprites/sprite.svg#blog_header"></use>
-              </svg></span></h1>
-          <p class="description">Статьи, которые я написал</p>
+              </svg>
+              <h1 class="title">Блог</h1>
+              <p class="block__desc">Статьи которые я написал</p>
+            </div>
+          </div>
         </div>
       </div>
     </header>
-    <section class="section__main">
-      <div class="bg__traingle">
-        <svg class="traingle" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none" width="100%" height="155">
-          <polygon class="left" points="0,0 0,86 520.8,86 520.8,86"></polygon>
-          <polygon class="right" points="1000,0 1000,86 480.8,86 480.8,86"></polygon>
-        </svg>
-      </div>
-      <div class="container">
-        <div class="main__content">
-          <div class="sidebar">
-            <nav class="content__menu">
-              <ul class="menu__article">
-                <li class="menu__article_item"><a class="article__item_link active" href="#">Самое важное в SASS</a></li>
-                <li class="menu__article_item"><a class="article__item_link" href="#">Приёмы в вёрстке, без которых  не обходится ни один сайт</a></li>
-                <li class="menu__article_item"><a class="article__item_link" href="#">Самый необходимый набор Gulp плагинов</a></li>
-                <li class="menu__article_item"><a class="article__item_link" href="#">Почему я выбрал Jade</a></li>
-              </ul>
-            </nav>
-          </div>
-          <div class="content__article">
-            <div class="article">
-              <h2 class="article__title">Самое важное в SASS</h2><span class="article__date">22 ноября 2016</span>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis debitis deserunt provident iste sint maxime, ducimus nulla laborum, eum voluptate voluptatum tempora consectetur minus nam fugit vel nesciunt pariatur animi eos, suscipit voluptatem molestias nostrum cupiditate deleniti. Enim magnam, harum nostrum, eum distinctio beatae officia temporibus quisquam, non consectetur cum?</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dicta animi nostrum voluptas consequuntur ex esse velit voluptate, corporis inventore! Repellendus similique fuga ullam repudiandae laudantium expedita, adipisci aperiam odit dolorem omnis vitae ex soluta labore dolore voluptas ipsam! Provident, cum. Neque officiis vero eum doloribus sunt veniam corrupti quos!</p>
-            </div>
-            <div class="article">
-              <h2 class="article__title">Самое важное в SASS</h2><span class="article__date">22 ноября 2016</span>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis debitis deserunt provident iste sint maxime, ducimus nulla laborum, eum voluptate voluptatum tempora consectetur minus nam fugit vel nesciunt pariatur animi eos, suscipit voluptatem molestias nostrum cupiditate deleniti. Enim magnam, harum nostrum, eum distinctio beatae officia temporibus quisquam, non consectetur cum?</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dicta animi nostrum voluptas consequuntur ex esse velit voluptate, corporis inventore! Repellendus similique fuga ullam repudiandae laudantium expedita, adipisci aperiam odit dolorem omnis vitae ex soluta labore dolore voluptas ipsam! Provident, cum. Neque officiis vero eum doloribus sunt veniam corrupti quos!</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <footer class="footer">
-      <div class="footer__row">
-        <div class="footer__menu">
-          <nav class="main__menu">
-            <ul class="menu">
-              <li class="menu__items"><a class="menu__items_link" href="works.html">Мои работы</a></li>
-              <li class="menu__items"><a class="menu__items_link" href="about.html">Обо мне</a></li>
-              <li class="menu__items"><a class="menu__items_link" href="blog.html">Блог</a></li>
-              <li class="menu__items"><a class="menu__items_link" href="index.html">Авторизация</a></li>
+    <div class="section__triangle">
+      <svg class="about__triangle_left" xmlns="http://www.w3.org/2000/svg" width="100%" height="153" viewbox="0 0 1000 85" preserveaspectratio="none">
+        <polygon class="left" points="0,0 0,86 1030,86 1030,86"></polygon>
+      </svg>
+      <svg class="about__triangle_right" xmlns="http://www.w3.org/2000/svg" width="100%" height="153" viewbox="0 0 1000 85" preserveaspectratio="none">
+        <polygon class="right" points="1000,0 1000,86 -030,86 -030,86"></polygon>
+      </svg>
+    </div>
+    <div class="container">
+      <div class="main__content">
+        <div class="sidebar">
+          <nav class="content__menu">
+            <ul class="menu__article">
+              <li class="menu__article_item"><a class="article__item_link active" href="#">Самое важное в SASS</a></li>
+              <li class="menu__article_item"><a class="article__item_link" href="#">Приёмы в вёрстке, без которых  не обходится ни один сайт</a></li>
+              <li class="menu__article_item"><a class="article__item_link" href="#">Самый необходимый набор Gulp плагинов</a></li>
+              <li class="menu__article_item"><a class="article__item_link" href="#">Почему я выбрал Jade</a></li>
             </ul>
           </nav>
         </div>
-        <div class="footer__social">
-          <ul class="socials">
-            <li class="socials__item"><a class="socials__item socials__item_vk" href="#">
-                <svg class="icon_sprites" width="40" height="40">
-                  <use xlink:href="assets/images/sprites/sprite.svg#vk"></use>
+        <div class="content__article">
+          <div class="article">
+            <h2 class="article__title">Самое важное в SASS</h2><span class="article__date">22 ноября 2016</span>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis debitis deserunt provident iste sint maxime, ducimus nulla laborum, eum voluptate voluptatum tempora consectetur minus nam fugit vel nesciunt pariatur animi eos, suscipit voluptatem molestias nostrum cupiditate deleniti. Enim magnam, harum nostrum, eum distinctio beatae officia temporibus quisquam, non consectetur cum?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dicta animi nostrum voluptas consequuntur ex esse velit voluptate, corporis inventore! Repellendus similique fuga ullam repudiandae laudantium expedita, adipisci aperiam odit dolorem omnis vitae ex soluta labore dolore voluptas ipsam! Provident, cum. Neque officiis vero eum doloribus sunt veniam corrupti quos!</p>
+          </div>
+          <div class="article">
+            <h2 class="article__title">Самое важное в SASS</h2><span class="article__date">22 ноября 2016</span>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis debitis deserunt provident iste sint maxime, ducimus nulla laborum, eum voluptate voluptatum tempora consectetur minus nam fugit vel nesciunt pariatur animi eos, suscipit voluptatem molestias nostrum cupiditate deleniti. Enim magnam, harum nostrum, eum distinctio beatae officia temporibus quisquam, non consectetur cum?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dicta animi nostrum voluptas consequuntur ex esse velit voluptate, corporis inventore! Repellendus similique fuga ullam repudiandae laudantium expedita, adipisci aperiam odit dolorem omnis vitae ex soluta labore dolore voluptas ipsam! Provident, cum. Neque officiis vero eum doloribus sunt veniam corrupti quos!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer__row">
+        <nav>
+          <ul class="menu footer__menu">
+            <li class="menu__items item_footer"><a class="menu__items_link" href="works.html">Мои работы</a></li>
+            <li class="menu__items item_footer"><a class="menu__items_link" href="about.html">Обо мне</a></li>
+            <li class="menu__items item_footer"><a class="menu__items_link" href="blog.html">Блог</a></li>
+            <li class="menu__items item_footer"><a class="menu__items_link" href="index.html">Авторизация</a></li>
+          </ul>
+        </nav>
+        <div class="footer__socials">
+          <ul class="socials socials__rounded">
+            <li class="socials__item sprites_footer"><a class="socials__link socials__item_vk_round" href="https://vk.com/alexanderpatsura" target="_blank">
+                <svg class="sprites" width="36" height="36" viewbox="0 0 50 50">
+                  <use xlink:href="assets/images/sprites/sprite.svg#vk_round"></use>
                 </svg></a></li>
-            <li class="socials__item"><a class="socials__item socials__item_git" href="#">
-                <svg class="icon_sprites" width="30" height="40">
-                  <use xlink:href="assets/images/sprites/sprite.svg#github"></use>
+            <li class="socials__item sprites_footer"><a class="socials__link socials__item_github_round" href="https://github.com/AlexandrPatsura" target="_blank">
+                <svg class="sprites" width="36" height="36" viewbox="0 0 50 50">
+                  <use xlink:href="assets/images/sprites/sprite.svg#github_round"></use>
                 </svg></a></li>
-            <li class="socials__item"><a class="socials__item socials__item_in" href="#">
-                <svg class="icon_sprites" width="30" height="45">
-                  <use xlink:href="assets/images/sprites/sprite.svg#in"></use>
+            <li class="socials__item sprites_footer"><a class="socials__link socials__item_in_round" href="https://www.linkedin.com/in/alexander-patsura-355a8b13b/" target="_blank">
+                <svg class="sprites" width="36" height="36" viewbox="0 0 50 50">
+                  <use xlink:href="assets/images/sprites/sprite.svg#in_round"></use>
                 </svg></a></li>
           </ul>
         </div>
       </div>
       <div class="footer__row">
-        <p class="description">Я веб-разработчик из Новосибирска, и этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. </p>
-        <p class="copy">&copy; Пацура Александр | создано с любовью в LoftSchool | 2017</p>
+        <div class="footer__text text-content">Я веб-разработчик из Новосибирска, и этот сайт я сделал в рамках<br> обучения в Школе онлайн образования LoftSchool. </div>
+        <div class="footer__copyright">&copy; Пацура Александр | создано с любовью в LoftSchool | 2017</div>
       </div>
     </footer>
   </div>
