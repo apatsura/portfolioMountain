@@ -30,7 +30,7 @@
         </div>
         <div class="toggle-menu"><span class="sandwich"><span class="top"></span><span class="center"></span><span class="bottom"></span></span></div>
         <nav class="menu-fullscreen">
-          <ul class="menu">
+          <ul class="menu menu-column">
             <li class="menu-fullscreen__item"><a class="menu-fullscreen__link title title-color" href="works.html">Мои работы</a></li>
             <li class="menu-fullscreen__item"><a class="menu-fullscreen__link title title-color" href="about.html">Обо мне</a></li>
             <li class="menu-fullscreen__item"><a class="menu-fullscreen__link title title-color" href="blog.html">Блог</a></li>
@@ -41,14 +41,12 @@
       <div class="user__card">
         <div class="welcome">
           <div class="user__avatar"><img class="user__img" src="assets/images/avatar.jpg" alt="User-avatar"></div>
-          <div class="info__user info_color">
-            <div class="block__title">
-              <svg class="block-title__picture" width="320" height="250">
-                <use xlink:href="assets/images/sprites/sprite.svg#blog_header"></use>
-              </svg>
-              <h1 class="title">Блог</h1>
-              <p class="block__desc">Статьи которые я написал</p>
-            </div>
+          <div class="block__title">
+            <svg class="block-title__picture" width="320" height="250">
+              <use xlink:href="assets/images/sprites/sprite.svg#blog_header"></use>
+            </svg>
+            <h1 class="title blog_title">Блог</h1>
+            <p class="block__desc">Статьи которые я написал</p>
           </div>
         </div>
       </div>
@@ -60,6 +58,60 @@
       <svg class="triangle_white" xmlns="http://www.w3.org/2000/svg" width="100%" height="153" viewbox="0 0 1000 85" preserveaspectratio="none">
         <polygon class="right" points="1000,0 1000,86 -030,86 -030,86"></polygon>
       </svg>
+    </div>
+    <div class="container">
+      <div class="main__content">
+        <div class="content__sidebar">
+          <nav class="content__nav">
+            <ul class="menu__article">
+              <li class="menu__article_item"><a class="article__item_link" href="#article-1">Самое важное в SASS</a></li>
+              <li class="menu__article_item"><a class="article__item_link" href="#article-2">Приёмы в вёрстке, без которых  не обходится ни один сайт</a></li>
+              <li class="menu__article_item"><a class="article__item_link" href="#article-3">Самый необходимый набор Gulp плагинов</a></li>
+              <li class="menu__article_item"><a class="article__item_link" href="#article-4">Почему я выбрал Jade</a></li>
+              <li class="menu__article_item"><a class="article__item_link" href="#article-5">article 5</a></li>
+              <li class="menu__article_item"><a class="article__item_link" href="#article-6">article 6</a></li>
+              <li class="menu__article_item"><a class="article__item_link" href="#article-7">article 7</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="content__article">
+          <div class="article" id="article-1">
+            <h2 class="article__title">Самое важное в SASS</h2><span class="article__date">22 ноября 2016</span>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis debitis deserunt provident iste sint maxime, ducimus nulla laborum, eum voluptate voluptatum tempora consectetur minus nam fugit vel nesciunt pariatur animi eos, suscipit voluptatem molestias nostrum cupiditate deleniti. Enim magnam, harum nostrum, eum distinctio beatae officia temporibus quisquam, non consectetur cum?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dicta animi nostrum voluptas consequuntur ex esse velit voluptate, corporis inventore! Repellendus similique fuga ullam repudiandae laudantium expedita, adipisci aperiam odit dolorem omnis vitae ex soluta labore dolore voluptas ipsam! Provident, cum. Neque officiis vero eum doloribus sunt veniam corrupti quos!</p>
+          </div>
+          <div class="article" id="article-2">
+            <h2 class="article__title">Самое важное в SASS</h2><span class="article__date">22 ноября 2016</span>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis debitis deserunt provident iste sint maxime, ducimus nulla laborum, eum voluptate voluptatum tempora consectetur minus nam fugit vel nesciunt pariatur animi eos, suscipit voluptatem molestias nostrum cupiditate deleniti. Enim magnam, harum nostrum, eum distinctio beatae officia temporibus quisquam, non consectetur cum?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dicta animi nostrum voluptas consequuntur ex esse velit voluptate, corporis inventore! Repellendus similique fuga ullam repudiandae laudantium expedita, adipisci aperiam odit dolorem omnis vitae ex soluta labore dolore voluptas ipsam! Provident, cum. Neque officiis vero eum doloribus sunt veniam corrupti quos!</p>
+          </div>
+          <div class="article" id="article-3">
+            <h2 class="article__title">Самое важное в SASS</h2><span class="article__date">22 ноября 2016</span>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis debitis deserunt provident iste sint maxime, ducimus nulla laborum, eum voluptate voluptatum tempora consectetur minus nam fugit vel nesciunt pariatur animi eos, suscipit voluptatem molestias nostrum cupiditate deleniti. Enim magnam, harum nostrum, eum distinctio beatae officia temporibus quisquam, non consectetur cum?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dicta animi nostrum voluptas consequuntur ex esse velit voluptate, corporis inventore! Repellendus similique fuga ullam repudiandae laudantium expedita, adipisci aperiam odit dolorem omnis vitae ex soluta labore dolore voluptas ipsam! Provident, cum. Neque officiis vero eum doloribus sunt veniam corrupti quos!</p>
+          </div>
+          <div class="article" id="article-4">
+            <h2 class="article__title">Самое важное в SASS</h2><span class="article__date">22 ноября 2016</span>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis debitis deserunt provident iste sint maxime, ducimus nulla laborum, eum voluptate voluptatum tempora consectetur minus nam fugit vel nesciunt pariatur animi eos, suscipit voluptatem molestias nostrum cupiditate deleniti. Enim magnam, harum nostrum, eum distinctio beatae officia temporibus quisquam, non consectetur cum?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dicta animi nostrum voluptas consequuntur ex esse velit voluptate, corporis inventore! Repellendus similique fuga ullam repudiandae laudantium expedita, adipisci aperiam odit dolorem omnis vitae ex soluta labore dolore voluptas ipsam! Provident, cum. Neque officiis vero eum doloribus sunt veniam corrupti quos!</p>
+          </div>
+          <div class="article" id="article-5">
+            <h2 class="article__title">Самое важное в SASS</h2><span class="article__date">22 ноября 2016</span>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis debitis deserunt provident iste sint maxime, ducimus nulla laborum, eum voluptate voluptatum tempora consectetur minus nam fugit vel nesciunt pariatur animi eos, suscipit voluptatem molestias nostrum cupiditate deleniti. Enim magnam, harum nostrum, eum distinctio beatae officia temporibus quisquam, non consectetur cum?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dicta animi nostrum voluptas consequuntur ex esse velit voluptate, corporis inventore! Repellendus similique fuga ullam repudiandae laudantium expedita, adipisci aperiam odit dolorem omnis vitae ex soluta labore dolore voluptas ipsam! Provident, cum. Neque officiis vero eum doloribus sunt veniam corrupti quos!</p>
+          </div>
+          <div class="article" id="article-6">
+            <h2 class="article__title">Самое важное в SASS</h2><span class="article__date">22 ноября 2016</span>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis debitis deserunt provident iste sint maxime, ducimus nulla laborum, eum voluptate voluptatum tempora consectetur minus nam fugit vel nesciunt pariatur animi eos, suscipit voluptatem molestias nostrum cupiditate deleniti. Enim magnam, harum nostrum, eum distinctio beatae officia temporibus quisquam, non consectetur cum?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dicta animi nostrum voluptas consequuntur ex esse velit voluptate, corporis inventore! Repellendus similique fuga ullam repudiandae laudantium expedita, adipisci aperiam odit dolorem omnis vitae ex soluta labore dolore voluptas ipsam! Provident, cum. Neque officiis vero eum doloribus sunt veniam corrupti quos!</p>
+          </div>
+          <div class="article" id="article-7">
+            <h2 class="article__title">Самое важное в SASS</h2><span class="article__date">22 ноября 2016</span>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis debitis deserunt provident iste sint maxime, ducimus nulla laborum, eum voluptate voluptatum tempora consectetur minus nam fugit vel nesciunt pariatur animi eos, suscipit voluptatem molestias nostrum cupiditate deleniti. Enim magnam, harum nostrum, eum distinctio beatae officia temporibus quisquam, non consectetur cum?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dicta animi nostrum voluptas consequuntur ex esse velit voluptate, corporis inventore! Repellendus similique fuga ullam repudiandae laudantium expedita, adipisci aperiam odit dolorem omnis vitae ex soluta labore dolore voluptas ipsam! Provident, cum. Neque officiis vero eum doloribus sunt veniam corrupti quos!</p>
+          </div>
+        </div>
+      </div>
     </div>
     <footer class="footer">
       <div class="footer__row">

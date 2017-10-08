@@ -1,36 +1,4 @@
 (function() {
-  // card
-  var cards = document.querySelectorAll(".authoriz-btn");
-  for (var i = 0, len = cards.length; i < len; i++) {
-    var card = cards[i];
-    clickListener();
-  }
-  
-  function clickListener() {
-    card.addEventListener("click", function() {
-      var block = document.querySelector(".user__card");
-      var c = block.classList;
-      c.contains("flipped") === true ? c.remove("flipped") : c.add("flipped");
-    });
-  }
-  
-  // toggle menu
-  $(".toggle-menu").click(function() {
-    $(".sandwich").toggleClass("toggle-active");
-    if($("body").css("overflow") === "visible") {
-      $("body").css("overflow", "hidden");
-    } else {
-      $("body").css("overflow", "visible");
-    }
-  });
-  
-  $(".toggle-menu").click(function() {
-    if ($(".menu-fullscreen").is(":visible")) {
-      $(".menu-fullscreen").css("display", "none");
-    } else {
-      $(".menu-fullscreen").css("display", "flex");
-    }
-  });
   
   // menu spy
   $(window).scroll(function(){
@@ -60,8 +28,12 @@
   
 })();
 
-import { parallax } from './common/parallax';
+// import { parallax } from './common/parallax';
+import { flipCard } from './common/flipCard';
+import { toggleMenu } from './common/toggleMenu';
 // import { initMap } from './common/googleMap';
 
-parallax();
+// parallax();
+flipCard();
+toggleMenu();
 // initMap();

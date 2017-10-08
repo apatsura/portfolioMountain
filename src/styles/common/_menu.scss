@@ -12,7 +12,11 @@
 }
 .menu-column {
   // display: flex;
-  flex-direction: column;
+  // flex-direction: column;
+  display: block;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .menu-item_bgc {
   background-color: rgba($baseColor, $alpha50);
@@ -135,7 +139,7 @@
 .menu-fullscreen__item {
   width: 100%;
   &:hover {
-    background-color: rgba($baseColor, $alpha50);
+    background-color: rgba($baseColor, $alpha87);
   }
 }
 // .menu-fullscreen__link {

@@ -107,39 +107,5 @@
 .contacts__link {
   color: $darkGreen;
 }
-// .contacts__link {
-//   text-align: left;
-// }
-// .block__title {
-//   position: relative;
-// }
-// .block-title__picture {
-//   position: absolute;
-//   top: -40px;
-//   left: 50%;
-//   margin-left: -157px;
-//   fill: rgba(255,255,255,0.07);
-// }
-// .block__desc {
-//   color: #ffffff;
-//   font-family: $rbtReg;
-//   margin: 0;
-// }
+
 // blog
-.main__content {
-  display: flex;
-}
-.content__sidebar {
-  width: 30%;
-  padding-right: 50px;
-}
-.content__nav {
-  text-align: right;
-}
-.content__article {
-  width: 70%;
-  padding-left: 50px;
-}
-.active {
-  border-right: 2px solid $baseColor;
-}

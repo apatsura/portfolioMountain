@@ -1,4 +1,4 @@
-export var initMap = function () {
+export const initMap = function () {
   var home = {lat: 47.781488, lng: 35.186588},
   myGeo = {
     zoom: 16,

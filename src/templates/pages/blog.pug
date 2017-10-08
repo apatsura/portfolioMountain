@@ -25,7 +25,7 @@ block content
           span.center
           span.bottom
       nav.menu-fullscreen
-        ul.menu
+        ul.menu.menu-column
           -
             var pages = [
               ["works.html", "Мои работы"],
@@ -36,17 +36,17 @@ block content
           each page in pages
             li.menu-fullscreen__item
               a(href=`${page[0]}`).menu-fullscreen__link.title.title-color #{page[1]}
+
     .user__card
       .welcome
         .user__avatar
           img(src="assets/images/avatar.jpg", alt="User-avatar").user__img
-        .info__user.info_color
-
-          .block__title
-            svg(width="320" height="250").block-title__picture
-              use(xlink:href="assets/images/sprites/sprite.svg#blog_header")
-            h1.title Блог
-            p.block__desc Статьи которые я написал
+        
+        .block__title
+          svg(width="320" height="250").block-title__picture
+            use(xlink:href="assets/images/sprites/sprite.svg#blog_header")
+          h1.title.blog_title Блог
+          p.block__desc Статьи которые я написал
 
   //- ///////////////////////////////////////////////////////////////////////////////////////////
 
@@ -58,7 +58,7 @@ block content
 
   //- ///////////////////////////////////////////////////////////////////////////////////////////
 
-  //- .container
+  .container
     .main__content
       .content__sidebar
         nav.content__nav

@@ -1,6 +1,7 @@
 @import 'normalize';
 @import 'common/_fonts';
 @import 'common/_variables';
+@import 'common/_components';
 @import 'common/_socials';
 @import 'common/_sprites';
 @import 'common/_auth';
@@ -9,6 +10,7 @@
 @import 'common/_header';
 @import 'common/_parallax';
 @import 'common/_section';
+@import 'common/_blog';
 @import 'common/_footer';
 
 html, body {
@@ -28,7 +30,7 @@ ul {
   font-size: 0;
 }
 li {
-  display: inline-block;
+  // display: inline-block;
   font-size: 16px;
 }
 a {
@@ -38,127 +40,5 @@ a {
 }
 .wrapper {
   position: relative;
-  overflow: hidden;
-  height: 100vh;
-}
-
-.title {
-  font-family: $bernierReg;
-  font-size: 63px;
-  color: $marengo;
-  margin-bottom: 14px;
-  letter-spacing: 5px;
-  font-weight: 400;
-  position: relative;
-  // top: -13px;
-  margin: 70px 0;
-  // display: inline-block;
-  
-  &::before {
-    content: "";
-    position: absolute;
-    top: 33px;
-    left: -40px;
-    background-color: rgba($marengo, $alpha20);
-    width: 22px;
-    height: 5px;
-  }
-  
-  &::after {
-    content: "";
-    position: absolute;
-    top: 33px;
-    right: -35px;
-    background-color: rgba($marengo, $alpha20);
-    width: 22px;
-    height: 5px;
-  }
-}
-.title-color {
-  margin: 0;
-  padding: 40px 0;
-  color: #ffffff;
-  display: inline-block;
-  &:hover {
-    &::before,
-    &::after {
-      position: absolute;
-      top: 73px;
-      background-color: rgba(255,255,255, 0.2);
-    }
-  }
-}
-.subtitle {
-  font-family: $bernierReg;
-  font-size: 35px;
-  position: relative;
-  font-weight: 400;
-  margin: 39px 0;
-  display: inline-block;
-  text-align: center;
-  &::before {
-    content: "";
-    position: absolute;
-    top: 17px;
-    left: -40px;
-    width: 22px;
-    height: 5px;
-    background-color: $marengo;
-    opacity: 0.2;
-  }
-  &::after {
-    content: "";
-    position: absolute;
-    top: 17px;
-    right: -40px;
-    width: 22px;
-    height: 5px;
-    background-color: $marengo;
-    opacity: 0.2;
-  }
-}
-.center {
-  left: 50%;
-  transform: translate(-50%, 0);
-}
-// sticky block
-.content__nav {
-  position: sticky;
-  top: 70px;
-}
-// skills
-.skill__circle {
-  fill: none;
-  stroke-width: 15;
-}
-.circle__first {
-  stroke: #dfdcd5;
-}
-.circle__second {
-  stroke: #1bb696;
-  stroke-dasharray: .0010 282.6;
-  transition: all 1s;
-}
-.skills-list {
-  padding-bottom: 40px;
-}
-.skills-list__item {
-  position: relative;
-  display: inline-block;
-  width: 122px;
-  height: 122px;
-  margin-right: 40px;
-}
-.skill__title {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  font-size: 13,95px;
-  font-family: $rbtMed;
-  color: $baseColor;
-}
-.circle-50 {
-  stroke-dasharray: 141.3 282.6;
+  // overflow: hidden;
 }
