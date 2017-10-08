@@ -13,7 +13,7 @@ const autoprefixer = require('gulp-autoprefixer');
 const rename = require('gulp-rename');
 const sourcemaps = require('gulp-sourcemaps');
 
-// image
+// images
 const imagemin = require('gulp-imagemin');
 
 // svg
@@ -99,10 +99,10 @@ function styles() {
   .pipe(gulp.dest(paths.styles.dest));
 }
 
-// image
+// images
 function images() {
-  return gulp.src(paths.images.src, {since: gulp.lastRun(images)})
-  .pipe(imagemin())
+  return gulp.src(paths.images.src,) // {since: gulp.lastRun('images')})
+  .pipe(imagemin({optimizationLevel: 5}))
   .pipe(gulp.dest(paths.images.dest));
 }
 
@@ -182,9 +182,11 @@ exports.clean = clean;
 exports.images = images;
 exports.sprites = sprites;
 exports.scripts = scripts;
+// exports.watch = watch;
+// exports.server = server;
 
 gulp.task('default', gulp.series(
-  gulp.parallel(fonts, styles, templates, scripts, images, sprites),
+  gulp.parallel(fonts, styles, templates, images, sprites, scripts),
   gulp.parallel(watch, server)
 ));
 

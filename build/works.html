@@ -8,101 +8,92 @@
   <link rel="stylesheet" href="assets/styles/app.min.css">
   <title>My works</title>
 </html>
-<body onload="map()">
+<body>
   <div class="wrapper">
-    <header class="header about">
-      <div class="menu__row">
+    <header class="header">
+      <div class="header__nav-bar">
         <div class="header__socials">
           <ul class="socials">
             <li class="socials__item"><a class="socials__link socials__item_vk" href="https://vk.com/alexanderpatsura" target="_blank">
-                <svg class="sprites" width="30" height="22">
+                <svg class="socials__sprite" width="30" height="22">
                   <use xlink:href="assets/images/sprites/sprite.svg#vk"></use>
                 </svg></a></li>
             <li class="socials__item"><a class="socials__link socials__item_github" href="https://github.com/AlexandrPatsura" target="_blank">
-                <svg class="sprites" width="30" height="22">
+                <svg class="socials__sprite" width="30" height="22">
                   <use xlink:href="assets/images/sprites/sprite.svg#github"></use>
                 </svg></a></li>
             <li class="socials__item"><a class="socials__link socials__item_in" href="https://www.linkedin.com/in/alexander-patsura-355a8b13b/" target="_blank">
-                <svg class="sprites" width="30" height="22">
+                <svg class="socials__sprite" width="30" height="22">
                   <use xlink:href="assets/images/sprites/sprite.svg#in"></use>
                 </svg></a></li>
           </ul>
         </div>
         <div class="toggle-menu"><span class="sandwich"><span class="top"></span><span class="center"></span><span class="bottom"></span></span></div>
-        <nav class="menu_full">
-          <ul class="menu main__menu">
-            <li class="menu__items items_full"><a class="menu__items_link link_full title" href="works.html">Мои работы</a></li>
-            <li class="menu__items items_full"><a class="menu__items_link link_full title" href="about.html">Обо мне</a></li>
-            <li class="menu__items items_full"><a class="menu__items_link link_full title" href="blog.html">Блог</a></li>
-            <li class="menu__items items_full"><a class="menu__items_link link_full title" href="index.html">Авторизация</a></li>
+        <nav class="menu-fullscreen">
+          <ul class="menu">
+            <li class="menu-fullscreen__item"><a class="menu-fullscreen__link title title-color" href="works.html">Мои работы</a></li>
+            <li class="menu-fullscreen__item"><a class="menu-fullscreen__link title title-color" href="about.html">Обо мне</a></li>
+            <li class="menu-fullscreen__item"><a class="menu-fullscreen__link title title-color" href="blog.html">Блог</a></li>
+            <li class="menu-fullscreen__item"><a class="menu-fullscreen__link title title-color" href="index.html">Авторизация</a></li>
           </ul>
         </nav>
       </div>
-      <div class="page__title">
-        <div class="section-title">
-          <svg class="section-title__picture" width="1200" height="400">
-            <use xlink:href="assets/images/sprites/sprite.svg#portfolio_header"></use>
-          </svg>
-        </div>
-      </div>
-      <div class="user__card effect__click">
-        <div class="user__card-block">
-          <div class="welcome__block">
-            <div class="user__avatar"><img class="user__img" src="assets/images/avatar.jpg" alt="User-avatar"></div>
-            <div class="info__user info_color">
-              <h2 class="user__name">Пацура Александр</h2>
-              <p class="user__desc">Личный сайт веб разработчика</p>
-            </div>
+      <div class="user__card">
+        <div class="welcome">
+          <div class="user__avatar"><img class="user__img" src="assets/images/avatar.jpg" alt="User-avatar"></div>
+          <div class="info__user info_color">
+            <h2 class="user__name">Пацура Александр</h2>
+            <p class="user__desc">Личный сайт веб разработчика</p>
           </div>
         </div>
       </div>
-      <div class="user__scroll"><a class="arrow-down" href="">
-          <svg class="sprites" width="30" height="22">
-            <use xlink:href="assets/images/sprites/sprite.svg#arrow_down"></use>
+      <div class="user__scroll"><a class="arrow-down" href="#">
+          <svg class="sprite__arrow-down" width="30" height="22">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprites/sprite.svg#arrow_down"></use>
           </svg></a></div>
     </header>
-    <div class="section__triangle">
-      <svg class="about__triangle_left" xmlns="http://www.w3.org/2000/svg" width="100%" height="153" viewbox="0 0 1000 85" preserveaspectratio="none">
+    <div class="section__triangle triangle_white">
+      <svg class="triangle_white" xmlns="http://www.w3.org/2000/svg" width="100%" height="153" viewbox="0 0 1000 85" preserveaspectratio="none">
         <polygon class="left" points="0,0 0,86 1030,86 1030,86"></polygon>
       </svg>
-      <svg class="about__triangle_right" xmlns="http://www.w3.org/2000/svg" width="100%" height="153" viewbox="0 0 1000 85" preserveaspectratio="none">
+      <svg class="triangle_white" xmlns="http://www.w3.org/2000/svg" width="100%" height="153" viewbox="0 0 1000 85" preserveaspectratio="none">
         <polygon class="right" points="1000,0 1000,86 -030,86 -030,86"></polygon>
       </svg>
     </div>
     <footer class="footer">
       <div class="footer__row">
-        <nav>
-          <ul class="menu footer__menu">
-            <li class="menu__items item_footer"><a class="menu__items_link" href="works.html">Мои работы</a></li>
-            <li class="menu__items item_footer"><a class="menu__items_link" href="about.html">Обо мне</a></li>
-            <li class="menu__items item_footer"><a class="menu__items_link" href="blog.html">Блог</a></li>
-            <li class="menu__items item_footer"><a class="menu__items_link" href="index.html">Авторизация</a></li>
+        <nav class="footer__menu">
+          <ul class="menu">
+            <li class="menu__item"><a class="menu__link menu__link_footer" href="works.html">Мои работы</a></li>
+            <li class="menu__item"><a class="menu__link menu__link_footer" href="about.html">Обо мне</a></li>
+            <li class="menu__item"><a class="menu__link menu__link_footer" href="blog.html">Блог</a></li>
+            <li class="menu__item"><a class="menu__link menu__link_footer" href="index.html">Авторизация</a></li>
           </ul>
         </nav>
         <div class="footer__socials">
           <ul class="socials socials__rounded">
-            <li class="socials__item sprites_footer"><a class="socials__link socials__item_vk_round" href="https://vk.com/alexanderpatsura" target="_blank">
+            <li class="socials__item sprites_footer"><a class="socials__link_footer socials__item_vk_round" href="https://vk.com/alexanderpatsura" target="_blank">
                 <svg class="sprites" width="36" height="36" viewbox="0 0 50 50">
                   <use xlink:href="assets/images/sprites/sprite.svg#vk_round"></use>
                 </svg></a></li>
-            <li class="socials__item sprites_footer"><a class="socials__link socials__item_github_round" href="https://github.com/AlexandrPatsura" target="_blank">
+            <li class="socials__item sprites_footer"><a class="socials__link_footer socials__item_github_round" href="https://github.com/AlexandrPatsura" target="_blank">
                 <svg class="sprites" width="36" height="36" viewbox="0 0 50 50">
                   <use xlink:href="assets/images/sprites/sprite.svg#github_round"></use>
                 </svg></a></li>
-            <li class="socials__item sprites_footer"><a class="socials__link socials__item_in_round" href="https://www.linkedin.com/in/alexander-patsura-355a8b13b/" target="_blank">
+            <li class="socials__item sprites_footer"><a class="socials__link_footer socials__item_in_round" href="https://www.linkedin.com/in/alexander-patsura-355a8b13b/" target="_blank">
                 <svg class="sprites" width="36" height="36" viewbox="0 0 50 50">
                   <use xlink:href="assets/images/sprites/sprite.svg#in_round"></use>
                 </svg></a></li>
           </ul>
         </div>
       </div>
-      <div class="footer__row">
-        <div class="footer__text text-content">Я веб-разработчик из Новосибирска, и этот сайт я сделал в рамках<br> обучения в Школе онлайн образования LoftSchool. </div>
+      <div class="footer__row text-opacity">
+        <div class="footer__text text-content">Я веб-разработчик из Новосибирска, и этот сайт я сделал в рамках<br> обучения в Школе онлайн образования LoftSchool.</div>
         <div class="footer__copyright">&copy; Пацура Александр | создано с любовью в LoftSchool | 2017</div>
       </div>
     </footer>
   </div>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2_VJSqqef31yShJu6MnuTYe88TENum5U"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="assets/scripts/bundle.js"></script>
-  <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2_VJSqqef31yShJu6MnuTYe88TENum5U&amp;callback=initMap"></script>
 </body>

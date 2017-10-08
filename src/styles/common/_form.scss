@@ -1,34 +1,5 @@
 // login
-.block-subtitle {
-  font-family: $bernierRegular;
-  font-size: 35px;
-  position: relative;
-  font-weight: 400;
-  margin: 0;
-  padding: 33px 0;
-  display: inline-block;
-  
-  &::before {
-    content: "";
-    position: absolute;
-    top: 50px;
-    left: -40px;
-    width: 22px;
-    height: 5px;
-    background-color: $grey;
-    opacity: 0.2;
-  }
-  &::after {
-    content: "";
-    position: absolute;
-    top: 50px;
-    right: -40px;
-    width: 22px;
-    height: 5px;
-    background-color: $grey;
-    opacity: 0.2;
-  }
-}
+
 // login + password
 .auth-form__row {
   display: flex;
@@ -36,24 +7,21 @@
   padding: 0 20px;
   margin-bottom: 20px;
 }
-
 .auth-form__input {
   height: 45px;
   outline: none;
-  background-color: #fff;
+  background-color: #ffffff;
   border-radius: 0px 10px 10px 0px;
   color: rgba(155, 158, 160, 0.5);
   padding: 0 20px;
   width: 100%;
   border: 1px solid transparent;
   box-sizing: border-box;
-  font-family: $robotoRegular;
-  
+  font-family: $rbtReg;
   &:focus {
-    border-color: $base;
+    border-color: $baseColor;
   }
 }
-
 .input__wrapper {
   display: flex;
   justify-content: center;
@@ -65,25 +33,20 @@
   line-height: 50px;
   width: 45px;
 }
-
 .auth-form__sprite {
   fill: #c4cbcd;
 }
-
 .login {
   width: 15px;
 }
-
 .pass {
   width: 17px;
 }
-
 .auth-form__captcha {
   margin-bottom: 38px;
 }
-
 .question {
-  font-family: $robotoBold;
+  font-family: $rbtB;
   opacity: .8;
   margin-bottom: 10px;
 }
@@ -91,7 +54,6 @@
 .captcha__radio:first-child {
   padding-right: 40px;
 }
-
 .checkbox,
 .radio {
   display: none;
@@ -103,7 +65,7 @@
   border: 2px solid rgba(155, 158, 160, 0.85);
   border-radius: 3px;
   position: relative;
-  background-color: #fff;
+  background-color: #ffffff;
   box-sizing: border-box;
 }
 .checkbox-custom,
@@ -115,28 +77,27 @@
   position: relative;
 }
 .checkbox-custom {
-  background-color: $base;
-  border: 2px solid $base;
+  background-color: #ffffff;
+  border: 2px solid #ffffff;
 }
-// .checkbox:checked + .checkbox-custom{
-//   background-color: $base;
-//   border: 2px solid $base;
-// }
+.checkbox:checked + .checkbox-custom{
+  background-color: $baseColor;
+  border: 2px solid $baseColor;
+}
 .checkbox:checked + .checkbox-custom::before {
   content: "";
   display: block;
   position: absolute;
   top: 3px;
   left: 3px;
-  color: #fff;
+  color: #ffffff;
   height: 5px;
   width: 8px;
   border-left: 2px solid;
   border-bottom: 2px solid;
-  // background-color: $base;
+  // background-color: $baseColor;
   transform: rotate(-45deg);
 }
-
 .radio:checked + .radio-custom::before {
   content: "";
   display: block;
@@ -145,14 +106,13 @@
   right: 4px;
   bottom: 4px;
   left: 4px;
-  background: $base;
+  background: $baseColor;
   border-radius: 2px;
 }
 .radio-custom,
 .radio:checked + .radio-custom::before {
   border-radius: 50%;
 }
-
 .radio:checked ~ .label {
-  color: $base;
+  color: $baseColor;
 }

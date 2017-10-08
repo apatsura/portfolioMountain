@@ -1,0 +1,13 @@
+extends ../template
+
+block variables
+  - var title = "Parallax"
+
+block content
+  //- .maincontent
+  #parallax.parallax
+    //- - for (var i = 0; i < 10; i++)
+    //-     .parallax__layer
+    //-       img(src=`/assets/images/parallax/layer-0${i}.png`).parallax__image
+    .parallax__layer
+        img(src="/assets/images/parallax/layer-05.png").parallax__image

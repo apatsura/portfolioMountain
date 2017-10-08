@@ -4,80 +4,79 @@ block variables
   - var title = "Welcome"
 
 block content
-  header.header.user
-    .user__authoriz-btn
-      a.authoriz-btn(href="#") Авторизоваться
-    .user__card.card_align.effect__click
-      .user__card-block.welcome
-        .welcome__block
-          .user__avatar
-            img(src="assets/images/avatar.jpg", alt="User-avatar").user__img
-          .info__user
-            h2.user__name Пацура Александр
-            p.user__desc Личный сайт веб разработчика
-          .user__socials
-            ul.socials
-              -
-                var socials = [
-                  ["vk", "https://vk.com/alexanderpatsura"],
-                  ["github", "https://github.com/AlexandrPatsura"],
-                  ["in", "https://www.linkedin.com/in/alexander-patsura-355a8b13b/"]
-                ]
-              each item in socials
-                li.socials__item
-                  a.socials__link(href=`${item[1]}`, class=`socials__item_${item[0]}`, target="_blank")
-                    svg(width="30" height="22").sprites.sprites_index-color
-                      use(xlink:href=`assets/images/sprites/sprite.svg#${item[0]}`)
-          nav
-            ul.menu.user__menu
-              -
-                var pages = [
-                  ["works.html", "Мои работы"],
-                  ["about.html", "Обо мне"],
-                  ["blog.html", "Блог"],
-                ]
-              each page in pages
-                li.menu__items.items_index
-                  a.menu__items_link.link_index(href=`${page[0]}`) #{page[1]}
-      .user__card-block.authoriz
-          h2.block-subtitle Авторизуйтесь
-          form.auth-form
-            .auth-form__row
-              label(for="login").input__wrapper
-                svg(width="30" height="22").auth-form__sprite.login
-                  use(xlink:href="assets/images/sprites/sprite.svg#login")
-              input.auth-form__input(type="text", placeholder="Логин", id="login")
-            .auth-form__row
-              label(for="pass").input__wrapper
-                svg(width="30" height="22").auth-form__sprite.pass
-                  use(xlink:href="assets/images/sprites/sprite.svg#password")
-              input.auth-form__input(type="password", placeholder="Пароль", id="pass")
-          .auth-form__captcha
-            .auth-form__row
-              label.captcha__checkbox
-                input.checkbox(type="checkbox", name="checkbox")
-                span.checkbox-custom
-                span.label Я человек
-            .question Вы точно не робот?
-            .captcha-radio
-              label.captcha__radio
-                input.radio(type="radio", name="radio")
-                span.radio-custom
-                span.label Да
-              label.captcha__radio
-                input.radio(type="radio", name="radio")
-                span.radio-custom
-                span.label Не уверен
-          nav
-            ul.menu.user__menu
-              -
-                var pages = [
-                  ["index.html", "На главную"],
-                  ["about.html", "Войти"],
-                ]
-              each page in pages
-                li.menu__items.items_index
-                  a.menu__items_link.link_index(href=`${page[0]}`) #{page[1]}
-    .user__footer
-      .footer__copyright
-        | &copy; Пацура Александр | создано с любовью в LoftSchool | 2017
+  header.header
+    .header__nav-bar
+      .user__authoriz-btn
+        a.authoriz-btn(href="#") Авторизоваться
+    .user__card.card-center
+      .flipping-card.welcome
+        .user__avatar
+          img(src="assets/images/avatar.jpg", alt="User-avatar").user__img
+        .info__user
+          h2.user__name Пацура Александр
+          p.user__desc Личный сайт веб разработчика
+        nav.info__socials
+          ul.socials
+            -
+              var socials = [
+                ["vk", "https://vk.com/alexanderpatsura"],
+                ["github", "https://github.com/AlexandrPatsura"],
+                ["in", "https://www.linkedin.com/in/alexander-patsura-355a8b13b/"]
+              ]
+            each social in socials
+              li.socials__item
+                a.socials__link(href=`${social[1]}`, class=`socials__item_${social[0]}`, target="_blank")
+                  svg(width="30" height="22").socials__sprite.sprite_color
+                    use(xlink:href=`assets/images/sprites/sprite.svg#${social[0]}`)
+        nav.info__menu
+          ul.menu
+            -
+              var pages = [
+                ["works.html", "Мои работы"],
+                ["about.html", "Обо мне"],
+                ["blog.html", "Блог"],
+              ]
+            each page in pages
+              li.menu__item_border.menu-item_bgc
+                a.menu__link_padding(href=`${page[0]}`) #{page[1]}
+      .flipping-card.authoriz
+        h2.subtitle Авторизуйтесь
+        form.auth-form
+          .auth-form__row
+            label(for="login").input__wrapper
+              svg(width="30" height="22").auth-form__sprite.login
+                use(xlink:href="assets/images/sprites/sprite.svg#login")
+            input.auth-form__input(type="text", placeholder="Логин", id="login")
+          .auth-form__row
+            label(for="pass").input__wrapper
+              svg(width="30" height="22").auth-form__sprite.pass
+                use(xlink:href="assets/images/sprites/sprite.svg#password")
+            input.auth-form__input(type="password", placeholder="Пароль", id="pass")
+        .auth-form__captcha
+          .auth-form__row
+            label.captcha__checkbox
+              input.checkbox(type="checkbox", name="checkbox")
+              span.checkbox-custom
+              span.label Я человек
+          .question Вы точно не робот?
+          .captcha-radio
+            label.captcha__radio
+              input.radio(type="radio", name="radio")
+              span.radio-custom
+              span.label Да
+            label.captcha__radio
+              input.radio(type="radio", name="radio")
+              span.radio-custom
+              span.label Не уверен
+        nav.info__menu
+          ul.menu
+            -
+              var pages = [
+                ["index.html", "На главную"],
+                ["about.html", "Войти"],
+              ]
+            each page in pages
+              li.menu__item_border.menu-item_bgc.menu-item-width
+                a.menu__link_padding(href=`${page[0]}`) #{page[1]}
+    .header__footer
+      .copyright &copy; Александр Пацура | создано с любовью в LoftSchool | 2017

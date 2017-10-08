@@ -16,7 +16,7 @@
   
   // toggle menu
   $(".toggle-menu").click(function() {
-    $(".sandwich").toggleClass("active");
+    $(".sandwich").toggleClass("toggle-active");
     if($("body").css("overflow") === "visible") {
       $("body").css("overflow", "hidden");
     } else {
@@ -25,69 +25,43 @@
   });
   
   $(".toggle-menu").click(function() {
-    if ($(".menu_full").is(":visible")) {
-      $(".menu_full").css("display", "none");
+    if ($(".menu-fullscreen").is(":visible")) {
+      $(".menu-fullscreen").css("display", "none");
     } else {
-      $(".menu_full").css("display", "flex");
+      $(".menu-fullscreen").css("display", "flex");
     }
   });
-
-  // google map
-  function initMap() {
-    var myGeo = {
-      zoom: 15,
-      center: {lat: 47.781488, lng: 35.186588},
-      styles: [
-        {elementType: 'geometry', stylers: [{color: '#ffffff'}]},
-        {elementType: 'labels.text.stroke', stylers: [{color: '#000000'}]},
-        {elementType: 'labels.text.fill', stylers: [{color: '#000000'}]},
-        {
-          featureType: 'administrative.locality',
-          elementType: 'labels.text.fill',
-          stylers: [{color: '#000000'}]
-        },
-        {
-          featureType: 'road',
-          elementType: 'geometry',
-          stylers: [{color: '#38414e'}]
-        },
-        {
-          featureType: 'road',
-          elementType: 'geometry.stroke',
-          stylers: [{color: '#212a37'}]
-        },
-        {
-          featureType: 'road',
-          elementType: 'labels.text.fill',
-          stylers: [{color: '#9ca5b3'}]
-        },
-        {
-          featureType: 'road.highway',
-          elementType: 'geometry',
-          stylers: [{color: '#746855'}]
-        },
-        {
-          featureType: 'road.highway',
-          elementType: 'geometry.stroke',
-          stylers: [{color: '#1f2835'}]
-        },
-        {
-          featureType: 'road.highway',
-          elementType: 'labels.text.fill',
-          stylers: [{color: '#f3d19c'}]
-        },
-        {
-          featureType: 'water',
-          elementType: 'geometry',
-          stylers: [{color: '#00bfa5'}]
-        },
-      ]
-    }
-    var map = new google.maps.Map(document.getElementById("map"), myGeo);
-    var marker = new google.maps.Marker({
-      position: myGeo.center,
-      map: map
-    });
-  }
+  
+  // menu spy
+  $(window).scroll(function(){
+    var $sections = $('.article');
+    $sections.each(function(i,el){
+      var top  = $(el).offset().top-100;
+      var bottom = top +$(el).height();
+      var scroll = $(window).scrollTop();
+      var id = $(el).attr('id');
+      if( scroll > top && scroll < bottom){
+        $('a.active').removeClass('active');
+        $('a[href="#'+id+'"]').addClass('active');
+      }
+    })
+  });
+  // переход к статье через меню в сайдбаре
+  $(".article__item_link").on("click","a", function (event) {
+    // исключаем стандартную реакцию браузера
+    event.preventDefault();
+    // получем идентификатор блока из атрибута href
+    var id  = $(this).attr('href'),
+    // находим высоту, на которой расположен блок
+    top = $(id).offset().top;
+    // анимируем переход к блоку, время: 800 мс
+    $('body,html').animate({scrollTop: top}, 800);
+  });
   
 })();
+
+import { parallax } from './common/parallax';
+// import { initMap } from './common/googleMap';
+
+parallax();
+// initMap();

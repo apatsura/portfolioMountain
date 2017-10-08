@@ -1,32 +1,31 @@
-footer.footer
-  .footer__row
-    nav
-      ul.menu.footer__menu
-        -
-          var pages = [
-            ["works.html", "Мои работы"],
-            ["about.html", "Обо мне"],
-            ["blog.html", "Блог"],
-            ["index.html", "Авторизация"]
-          ]
-        each page in pages
-          li.menu__items.item_footer
-            a.menu__items_link(href=`${page[0]}`) #{page[1]}
-    .footer__socials
-      ul.socials.socials__rounded
-        -
-          var socials = [
-            ["vk_round", "https://vk.com/alexanderpatsura"],
-            ["github_round", "https://github.com/AlexandrPatsura"],
-            ["in_round", "https://www.linkedin.com/in/alexander-patsura-355a8b13b/"]
-          ]
-        each item in socials
-          li.socials__item.sprites_footer
-            a.socials__link(href=`${item[1]}`, class=`socials__item_${item[0]}`, target="_blank")
-              svg(width="36" height="36" viewbox="0 0 50 50").sprites
-                use(xlink:href=`assets/images/sprites/sprite.svg#${item[0]}`)
-  .footer__row
-    .footer__text.text-content
-        | Я веб-разработчик из Новосибирска, и этот сайт я сделал в рамках<br> обучения в Школе онлайн образования LoftSchool. 
-    .footer__copyright
-        | &copy; Пацура Александр | создано с любовью в LoftSchool | 2017
+.footer__row
+  nav.footer__menu
+    ul.menu
+      -
+        var pages = [
+          ["works.html", "Мои работы"],
+          ["about.html", "Обо мне"],
+          ["blog.html", "Блог"],
+          ["index.html", "Авторизация"]
+        ]
+      each page in pages
+        li.menu__item
+          a.menu__link.menu__link_footer(href=`${page[0]}`) #{page[1]}
+  .footer__socials
+    ul.socials.socials__rounded
+      -
+        var socials = [
+          ["vk_round", "https://vk.com/alexanderpatsura"],
+          ["github_round", "https://github.com/AlexandrPatsura"],
+          ["in_round", "https://www.linkedin.com/in/alexander-patsura-355a8b13b/"]
+        ]
+      each item in socials
+        li.socials__item.sprites_footer
+          a.socials__link_footer(href=`${item[1]}`, class=`socials__item_${item[0]}`, target="_blank")
+            svg(width="36" height="36" viewbox="0 0 50 50").sprites
+              use(xlink:href=`assets/images/sprites/sprite.svg#${item[0]}`)
+.footer__row.text-opacity
+  .footer__text.text-content
+      | Я веб-разработчик из Новосибирска, и этот сайт я сделал в рамках<br> обучения в Школе онлайн образования LoftSchool.
+  .footer__copyright
+      | &copy; Пацура Александр | создано с любовью в LoftSchool | 2017

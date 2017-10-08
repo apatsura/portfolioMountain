@@ -1,115 +1,65 @@
 @import 'normalize';
 @import 'common/_fonts';
 @import 'common/_variables';
-
 @import 'common/_socials';
 @import 'common/_sprites';
 @import 'common/_auth';
 @import 'common/_menu';
 @import 'common/_form';
 @import 'common/_header';
+@import 'common/_parallax';
 @import 'common/_section';
 @import 'common/_footer';
 
-body {
-  max-width: 1800px;
+html, body {
+  // max-width: 1800px;
   margin: 0 auto;
   font-size: 16px;
+  font-family: $rbtReg;
+  height: 100%;
 }
-
 * {
   box-sizing: border-box;
 }
-
-.container {
-  width: 1200px;
-  padding: 0 10px;
-  margin: 0 auto;
-}
-
-.wrapper {
-  background: url('../images/background.png') no-repeat center center;
-  background-size: cover;
-  height: 100vh;
-}
-
 ul {
   margin: 0;
   padding: 0;
-}
-
-li {
   list-style-type: none;
+  font-size: 0;
 }
-
-// blog
-// .blog {
-//   height: 50vh;
-// }
-
-// .header__menu {
-//   display: flex;
-//   justify-content: space-between;
-  
-//   .main__menu {
-//     display: none;
-//   }
-// }
-
-// .header__social {
-//   padding-top: 28px;
-//   padding-left: 20px;
-  
-//   .icon_sprites {
-//     fill: #fff;
-//     opacity: .5;
-//     transition: 0.5s ease;
-    
-//     &:hover {
-//       opacity: 1;
-//       transition: 0.5s ease;
-//     }
-//   }
-// }
-
-// .hamburger {
-//   fill: #fff;
-//   padding-top: 28px;
-//   padding-right: 30px;
-// }
-
-// .section__user {
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   text-align: center;
-// }
-
-// .section__title {
-  
-//   .description {
-//     color: #ffffff;
-//   }
-// }
+li {
+  display: inline-block;
+  font-size: 16px;
+}
+a {
+  display: block;
+  text-decoration: none;
+  color: #ffffff;
+}
+.wrapper {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+}
 
 .title {
-  font-family: $bernierRegular;
+  font-family: $bernierReg;
   font-size: 63px;
-  color: #ffffff;
-  margin-top: 27px;
+  color: $marengo;
   margin-bottom: 14px;
   letter-spacing: 5px;
   font-weight: 400;
   position: relative;
-  display: inline-block;
+  // top: -13px;
+  margin: 70px 0;
+  // display: inline-block;
   
   &::before {
     content: "";
     position: absolute;
     top: 33px;
     left: -40px;
-    background-color: #fff;
-    opacity: .2;
+    background-color: rgba($marengo, $alpha20);
     width: 22px;
     height: 5px;
   }
@@ -119,173 +69,63 @@ li {
     position: absolute;
     top: 33px;
     right: -35px;
-    background-color: #fff;
-    opacity: .2;
+    background-color: rgba($marengo, $alpha20);
     width: 22px;
     height: 5px;
   }
 }
-
-.title.title-color {
-  color: $darkGrey;
-  &::before,
-  &::after {
-    background-color: $darkGrey;
+.title-color {
+  margin: 0;
+  padding: 40px 0;
+  color: #ffffff;
+  display: inline-block;
+  &:hover {
+    &::before,
+    &::after {
+      position: absolute;
+      top: 73px;
+      background-color: rgba(255,255,255, 0.2);
+    }
   }
 }
-
-// .title__bg {
-//   position: absolute;
-//   top: 0;
-//   left: 50%;
-//   margin-left: -150px;
-  
-//   .icon_sprites {
-//     fill: #fff;
-//     fill-opacity: 0.07;
-//   }
-// }
-
-// .section__main {
-//   position: relative;
-//   background-color: #fff;  
-// }
-
-// .bg__traingle {
-//   position: absolute;
-//   right: 0;
-//   left: 0;
-//   top: -155px;
-// }
-
-// .traingle {
-//   fill: #fff;
-// }
-
-// .main__content {
-//   display: flex;
-//   flex-direction: row;
-// }
-
-// .sidebar {
-//   width: 30%;
-//   padding: 0 30px;
-// }
-
-// .content__article {
-//   width: 70%;
-//   padding: 0 30px;
-// }
-
-// .menu__article {
-//   margin: 0;
-//   list-style-type: none;
-// }
-
-// .article__item_link.active {
-//   border-right: 3px solid $base;
-//   color: $base;
-//   font-family: $robotoBold;
-// }
-
-// .article__item_link {
-//   display: block;
-//   padding: 15px 20px;
-//   text-align: right;
-//   text-decoration: none;
-//   color: $darkGrey;
-//   font-family: $robotoRegular;
-// }
-
-// .sidebar {
-//   padding-top: 75px;
-// }
-
-// .article {
-//   border-bottom: 5px solid #f1f1f2;
-//   padding-bottom: 70px;
-  
-//   &::last-child {
-//     border-bottom: none;
-//   }
-// }
-
-// .article__title {
-//   padding-top: 70px;
-//   font-size: 35px;
-//   font-family: $bernierRegular;
-//   color: $darkGrey;
-//   font-weight: 400;
-//   margin-top: 0;
-//   margin-bottom: 30px;
-// }
-
-// .article__date {
-//   color: $base;
-// }
-
-// footer
-// .footer{
-//   background-color: $darkGrey;
-//   opacity: .85;
-//   color: #fff;
-// }
-
-// .footer__row {
-//   display: flex;
-//   justify-content: space-between;
-//   font-family: $robotoLight;
-//   align-items: center;
-  
-//   .description {
-//     opacity: 0.5;
-//     width: 35%;
-//     padding-left: 20px;
-//     font-family: $robotoLight;
-//   }
-  
-//   .copy {
-//     padding-right: 20px;
-//   }
-// }
-
-// .footer__menu {
-//   display: flex;
-//   justify-content: center;
-  
-//   .menu__items {
-//     font-size: 16px;
-//     list-style-type: none;
-    
-//     .menu__items_link {
-//       text-decoration: none;
-//       display: block;
-//       color: #fff;
-//       padding: 20px;
-//       font-family: $robotoMedium;
-//     }
-//   }
-// }
-
-// .footer__social {
-//   padding-right: 20px;
-//   display: flex;
-//   justify-content: center;
-//   fill: #fff;
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
+.subtitle {
+  font-family: $bernierReg;
+  font-size: 35px;
+  position: relative;
+  font-weight: 400;
+  margin: 39px 0;
+  display: inline-block;
+  text-align: center;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 17px;
+    left: -40px;
+    width: 22px;
+    height: 5px;
+    background-color: $marengo;
+    opacity: 0.2;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 17px;
+    right: -40px;
+    width: 22px;
+    height: 5px;
+    background-color: $marengo;
+    opacity: 0.2;
+  }
+}
+.center {
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+// sticky block
+.content__nav {
+  position: sticky;
+  top: 70px;
+}
 // skills
 .skill__circle {
   fill: none;
@@ -299,14 +139,16 @@ li {
   stroke-dasharray: .0010 282.6;
   transition: all 1s;
 }
-
+.skills-list {
+  padding-bottom: 40px;
+}
 .skills-list__item {
   position: relative;
   display: inline-block;
   width: 122px;
   height: 122px;
+  margin-right: 40px;
 }
-
 .skill__title {
   position: absolute;
   top: 50%;
@@ -314,10 +156,9 @@ li {
   transform: translate(-50%, -50%);
   text-align: center;
   font-size: 13,95px;
-  font-family: $robotoMedium;
-  color: $base;
+  font-family: $rbtMed;
+  color: $baseColor;
 }
-
 .circle-50 {
   stroke-dasharray: 141.3 282.6;
 }

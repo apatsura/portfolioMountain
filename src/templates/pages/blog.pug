@@ -4,8 +4,8 @@ block variables
   - var title = "Blog"
 
 block content
-  header.header.about
-    .menu__row
+  header.header
+    .header__nav-bar
       .header__socials
         ul.socials
           -
@@ -14,18 +14,18 @@ block content
               ["github", "https://github.com/AlexandrPatsura"],
               ["in", "https://www.linkedin.com/in/alexander-patsura-355a8b13b/"]
             ]
-          each item in socials
+          each social in socials
             li.socials__item
-              a.socials__link(href=`${item[1]}`, class=`socials__item_${item[0]}`, target="_blank")
-                svg(width="30" height="22").sprites
-                  use(xlink:href=`assets/images/sprites/sprite.svg#${item[0]}`)
+              a.socials__link(href=`${social[1]}`, class=`socials__item_${social[0]}`, target="_blank")
+                svg(width="30" height="22").socials__sprite
+                  use(xlink:href=`assets/images/sprites/sprite.svg#${social[0]}`)
       .toggle-menu
         span.sandwich
           span.top
           span.center
           span.bottom
-      nav.menu_full
-        ul.menu.main__menu
+      nav.menu-fullscreen
+        ul.menu
           -
             var pages = [
               ["works.html", "Мои работы"],
@@ -34,51 +34,86 @@ block content
               ["index.html", "Авторизация"],
             ]
           each page in pages
-            li.menu__items.items_full
-              a.menu__items_link.link_full.title(href=`${page[0]}`) #{page[1]}
-    .user__card.effect__click
-      .user__card-block
-        .welcome__block
-          .user__avatar
-            img(src="assets/images/avatar.jpg", alt="User-avatar").user__img
-          .info__user.info_color
+            li.menu-fullscreen__item
+              a(href=`${page[0]}`).menu-fullscreen__link.title.title-color #{page[1]}
+    .user__card
+      .welcome
+        .user__avatar
+          img(src="assets/images/avatar.jpg", alt="User-avatar").user__img
+        .info__user.info_color
+
           .block__title
             svg(width="320" height="250").block-title__picture
               use(xlink:href="assets/images/sprites/sprite.svg#blog_header")
             h1.title Блог
             p.block__desc Статьи которые я написал
 
-  .section__triangle
-    svg.about__triangle_left(xmlns='http://www.w3.org/2000/svg', width="100%" height="153" viewbox='0 0 1000 85', preserveaspectratio='none')
-      polygon.left(points='0,0 0,86 1030,86 1030,86')
-    svg.about__triangle_right(xmlns='http://www.w3.org/2000/svg', width="100%" height="153" viewbox='0 0 1000 85', preserveaspectratio='none')
-      polygon.right(points='1000,0 1000,86 -030,86 -030,86')
-  
+  //- ///////////////////////////////////////////////////////////////////////////////////////////
 
-  .container
+  .section__triangle.triangle_white
+    svg.triangle_white(xmlns='http://www.w3.org/2000/svg', width="100%" height="153" viewbox='0 0 1000 85', preserveaspectratio='none')
+      polygon.left(points='0,0 0,86 1030,86 1030,86')
+    svg.triangle_white(xmlns='http://www.w3.org/2000/svg', width="100%" height="153" viewbox='0 0 1000 85', preserveaspectratio='none')
+      polygon.right(points='1000,0 1000,86 -030,86 -030,86')
+
+  //- ///////////////////////////////////////////////////////////////////////////////////////////
+
+  //- .container
     .main__content
-      .sidebar
-        nav.content__menu
+      .content__sidebar
+        nav.content__nav
           ul.menu__article
             li.menu__article_item
-              a(href="#").article__item_link.active Самое важное в SASS
+              a(href="#article-1").article__item_link Самое важное в SASS
             li.menu__article_item
-              a(href="#").article__item_link Приёмы в вёрстке, без которых  не обходится ни один сайт
+              a(href="#article-2").article__item_link Приёмы в вёрстке, без которых  не обходится ни один сайт
             li.menu__article_item
-              a(href="#").article__item_link Самый необходимый набор Gulp плагинов
+              a(href="#article-3").article__item_link Самый необходимый набор Gulp плагинов
             li.menu__article_item
-              a(href="#").article__item_link Почему я выбрал Jade
+              a(href="#article-4").article__item_link Почему я выбрал Jade
+            li.menu__article_item
+              a(href="#article-5").article__item_link article 5
+            li.menu__article_item
+              a(href="#article-6").article__item_link article 6
+            li.menu__article_item
+              a(href="#article-7").article__item_link article 7
       .content__article
-        .article
+        .article#article-1
           h2.article__title Самое важное в SASS
           span.article__date 22 ноября 2016
           p Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis debitis deserunt provident iste sint maxime, ducimus nulla laborum, eum voluptate voluptatum tempora consectetur minus nam fugit vel nesciunt pariatur animi eos, suscipit voluptatem molestias nostrum cupiditate deleniti. Enim magnam, harum nostrum, eum distinctio beatae officia temporibus quisquam, non consectetur cum?
           p Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dicta animi nostrum voluptas consequuntur ex esse velit voluptate, corporis inventore! Repellendus similique fuga ullam repudiandae laudantium expedita, adipisci aperiam odit dolorem omnis vitae ex soluta labore dolore voluptas ipsam! Provident, cum. Neque officiis vero eum doloribus sunt veniam corrupti quos!
-        .article
+        .article#article-2
+          h2.article__title Самое важное в SASS
+          span.article__date 22 ноября 2016
+          p Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis debitis deserunt provident iste sint maxime, ducimus nulla laborum, eum voluptate voluptatum tempora consectetur minus nam fugit vel nesciunt pariatur animi eos, suscipit voluptatem molestias nostrum cupiditate deleniti. Enim magnam, harum nostrum, eum distinctio beatae officia temporibus quisquam, non consectetur cum?
+          p Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dicta animi nostrum voluptas consequuntur ex esse velit voluptate, corporis inventore! Repellendus similique fuga ullam repudiandae laudantium expedita, adipisci aperiam odit dolorem omnis vitae ex soluta labore dolore voluptas ipsam! Provident, cum. Neque officiis vero eum doloribus sunt veniam corrupti quos!
+        .article#article-3
+          h2.article__title Самое важное в SASS
+          span.article__date 22 ноября 2016
+          p Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis debitis deserunt provident iste sint maxime, ducimus nulla laborum, eum voluptate voluptatum tempora consectetur minus nam fugit vel nesciunt pariatur animi eos, suscipit voluptatem molestias nostrum cupiditate deleniti. Enim magnam, harum nostrum, eum distinctio beatae officia temporibus quisquam, non consectetur cum?
+          p Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dicta animi nostrum voluptas consequuntur ex esse velit voluptate, corporis inventore! Repellendus similique fuga ullam repudiandae laudantium expedita, adipisci aperiam odit dolorem omnis vitae ex soluta labore dolore voluptas ipsam! Provident, cum. Neque officiis vero eum doloribus sunt veniam corrupti quos!
+        .article#article-4
+          h2.article__title Самое важное в SASS
+          span.article__date 22 ноября 2016
+          p Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis debitis deserunt provident iste sint maxime, ducimus nulla laborum, eum voluptate voluptatum tempora consectetur minus nam fugit vel nesciunt pariatur animi eos, suscipit voluptatem molestias nostrum cupiditate deleniti. Enim magnam, harum nostrum, eum distinctio beatae officia temporibus quisquam, non consectetur cum?
+          p Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dicta animi nostrum voluptas consequuntur ex esse velit voluptate, corporis inventore! Repellendus similique fuga ullam repudiandae laudantium expedita, adipisci aperiam odit dolorem omnis vitae ex soluta labore dolore voluptas ipsam! Provident, cum. Neque officiis vero eum doloribus sunt veniam corrupti quos!
+        .article#article-5
+          h2.article__title Самое важное в SASS
+          span.article__date 22 ноября 2016
+          p Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis debitis deserunt provident iste sint maxime, ducimus nulla laborum, eum voluptate voluptatum tempora consectetur minus nam fugit vel nesciunt pariatur animi eos, suscipit voluptatem molestias nostrum cupiditate deleniti. Enim magnam, harum nostrum, eum distinctio beatae officia temporibus quisquam, non consectetur cum?
+          p Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dicta animi nostrum voluptas consequuntur ex esse velit voluptate, corporis inventore! Repellendus similique fuga ullam repudiandae laudantium expedita, adipisci aperiam odit dolorem omnis vitae ex soluta labore dolore voluptas ipsam! Provident, cum. Neque officiis vero eum doloribus sunt veniam corrupti quos!
+        .article#article-6
+          h2.article__title Самое важное в SASS
+          span.article__date 22 ноября 2016
+          p Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis debitis deserunt provident iste sint maxime, ducimus nulla laborum, eum voluptate voluptatum tempora consectetur minus nam fugit vel nesciunt pariatur animi eos, suscipit voluptatem molestias nostrum cupiditate deleniti. Enim magnam, harum nostrum, eum distinctio beatae officia temporibus quisquam, non consectetur cum?
+          p Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dicta animi nostrum voluptas consequuntur ex esse velit voluptate, corporis inventore! Repellendus similique fuga ullam repudiandae laudantium expedita, adipisci aperiam odit dolorem omnis vitae ex soluta labore dolore voluptas ipsam! Provident, cum. Neque officiis vero eum doloribus sunt veniam corrupti quos!
+        .article#article-7
           h2.article__title Самое важное в SASS
           span.article__date 22 ноября 2016
           p Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis debitis deserunt provident iste sint maxime, ducimus nulla laborum, eum voluptate voluptatum tempora consectetur minus nam fugit vel nesciunt pariatur animi eos, suscipit voluptatem molestias nostrum cupiditate deleniti. Enim magnam, harum nostrum, eum distinctio beatae officia temporibus quisquam, non consectetur cum?
           p Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dicta animi nostrum voluptas consequuntur ex esse velit voluptate, corporis inventore! Repellendus similique fuga ullam repudiandae laudantium expedita, adipisci aperiam odit dolorem omnis vitae ex soluta labore dolore voluptas ipsam! Provident, cum. Neque officiis vero eum doloribus sunt veniam corrupti quos!
 
 
-  include ../common/footer
+  footer.footer
+    include ../common/footer

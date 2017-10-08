@@ -1,8 +1,17 @@
 .footer {
   background-color: rgba(55, 62, 66, 0.85);
-  font-family: $robotoLight;
+  font-family: $rbtL;
   color: #ffffff;
 }
+.about-footer {
+  margin-top: -146px;
+  position: relative;
+}
+// .about-footer {
+//   position: absolute;
+//   width: 100%;
+//   bottom: 0;
+// }
 .footer__row {
   display: flex;
   justify-content: space-between;
@@ -14,14 +23,21 @@
 .sprites_footer {
   padding: 0 10px 0 0;
 }
-.user__footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: $robotoLight;
-  color: #ffffff;
-  min-height: 95px;
-}
+// .user__footer {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   font-family: $rbtL;
+//   color: #ffffff;
+//   min-height: 95px;
+// }
 .text-opacity {
   opacity: .5;
+}
+.footer__menu {
+  display: flex;
+  font-family: $rbtMed;
+}
+.menu__link_footer {
+  padding-right: 40px;
 }

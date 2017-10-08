@@ -1,48 +1,43 @@
-header.header.about
-  .menu__row
-    .header__socials
-      ul.socials
-        -
-          var socials = [
-            ["vk", "https://vk.com/alexanderpatsura"],
-            ["github", "https://github.com/AlexandrPatsura"],
-            ["in", "https://www.linkedin.com/in/alexander-patsura-355a8b13b/"]
-          ]
-        each item in socials
-          li.socials__item
-            a.socials__link(href=`${item[1]}`, class=`socials__item_${item[0]}`, target="_blank")
-              svg(width="30" height="22").sprites
-                use(xlink:href=`assets/images/sprites/sprite.svg#${item[0]}`)
-    .toggle-menu
-      span.sandwich
-        span.top
-        span.center
-        span.bottom
-    nav.menu_full
-      ul.menu.main__menu
-        -
-          var pages = [
-            ["works.html", "Мои работы"],
-            ["about.html", "Обо мне"],
-            ["blog.html", "Блог"],
-            ["index.html", "Авторизация"],
-          ]
-        each page in pages
-          li.menu__items.items_full
-            a.menu__items_link.link_full.title(href=`${page[0]}`) #{page[1]}
-  .page__title
-    .section-title
-      svg(width="1200" height="400").section-title__picture
-        use(xlink:href="assets/images/sprites/sprite.svg#portfolio_header")
-  .user__card.effect__click
-    .user__card-block
-      .welcome__block
+extends ../template
+
+block variables
+  - var title = "Welcome"
+
+block content
+  header.header
+    .header__nav-bar
+      .header__socials
+        ul.socials
+          -
+            var socials = [
+              ["vk", "https://vk.com/alexanderpatsura"],
+              ["github", "https://github.com/AlexandrPatsura"],
+              ["in", "https://www.linkedin.com/in/alexander-patsura-355a8b13b/"]
+            ]
+          each social in socials
+            li.socials__item
+              a.socials__link(href=`${social[1]}`, class=`socials__item_${social[0]}`, target="_blank")
+                svg(width="30" height="22").socials__sprite
+                  use(xlink:href=`assets/images/sprites/sprite.svg#${social[0]}`)
+      .toggle-menu
+        span.sandwich
+          span.top
+          span.center
+          span.bottom
+      nav.menu-fullscreen
+        ul.menu
+          -
+            var pages = [
+              ["works.html", "Мои работы"],
+              ["about.html", "Обо мне"],
+              ["blog.html", "Блог"],
+              ["index.html", "Авторизация"],
+            ]
+          each page in pages
+            li.menu-fullscreen__item
+              a(href=`${page[0]}`).menu-fullscreen__link.title.title-color #{page[1]}
+    .user__card
+      .welcome
         .user__avatar
           img(src="assets/images/avatar.jpg", alt="User-avatar").user__img
         .info__user.info_color
-          h2.user__name Пацура Александр
-          p.user__desc Личный сайт веб разработчика
-  .user__scroll
-    a(href="").arrow-down
-      svg(width="30" height="22").sprites
-        use(xlink:href="assets/images/sprites/sprite.svg#arrow_down")

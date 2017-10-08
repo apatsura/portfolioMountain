@@ -4,18 +4,60 @@ block variables
   - var title = "My works"
 
 block content
-  include ../common/header
-  //- ///////////////////////////////////////////////////////////////////////////////////////////
+  header.header
+    .header__nav-bar
+      .header__socials
+        ul.socials
+          -
+            var socials = [
+              ["vk", "https://vk.com/alexanderpatsura"],
+              ["github", "https://github.com/AlexandrPatsura"],
+              ["in", "https://www.linkedin.com/in/alexander-patsura-355a8b13b/"]
+            ]
+          each social in socials
+            li.socials__item
+              a.socials__link(href=`${social[1]}`, class=`socials__item_${social[0]}`, target="_blank")
+                svg(width="30" height="22").socials__sprite
+                  use(xlink:href=`assets/images/sprites/sprite.svg#${social[0]}`)
+      .toggle-menu
+        span.sandwich
+          span.top
+          span.center
+          span.bottom
+      nav.menu-fullscreen
+        ul.menu
+          -
+            var pages = [
+              ["works.html", "Мои работы"],
+              ["about.html", "Обо мне"],
+              ["blog.html", "Блог"],
+              ["index.html", "Авторизация"],
+            ]
+          each page in pages
+            li.menu-fullscreen__item
+              a(href=`${page[0]}`).menu-fullscreen__link.title.title-color #{page[1]}
+    .user__card
+      .welcome
+        .user__avatar
+          img(src="assets/images/avatar.jpg", alt="User-avatar").user__img
+        .info__user.info_color
+          h2.user__name Пацура Александр
+          p.user__desc Личный сайт веб разработчика
 
-  
-  .section__triangle
-    svg.about__triangle_left(xmlns='http://www.w3.org/2000/svg', width="100%" height="153" viewbox='0 0 1000 85', preserveaspectratio='none')
+    //- ///////////////////////////////////////////////////////////////////////////////////////////
+
+    .user__scroll
+      a.arrow-down(href="#")
+        svg.sprite__arrow-down(width="30" height="22")
+          use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/sprites/sprite.svg#arrow_down")
+
+  .section__triangle.triangle_white
+    svg.triangle_white(xmlns='http://www.w3.org/2000/svg', width="100%" height="153" viewbox='0 0 1000 85', preserveaspectratio='none')
       polygon.left(points='0,0 0,86 1030,86 1030,86')
-    svg.about__triangle_right(xmlns='http://www.w3.org/2000/svg', width="100%" height="153" viewbox='0 0 1000 85', preserveaspectratio='none')
+    svg.triangle_white(xmlns='http://www.w3.org/2000/svg', width="100%" height="153" viewbox='0 0 1000 85', preserveaspectratio='none')
       polygon.right(points='1000,0 1000,86 -030,86 -030,86')
-  
 
-  
   //- ///////////////////////////////////////////////////////////////////////////////////////////
   
-  include ../common/footer
+  footer.footer
+    include ../common/footer

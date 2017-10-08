@@ -8,45 +8,45 @@
   <link rel="stylesheet" href="assets/styles/app.min.css">
   <title>Welcome</title>
 </html>
-<body onload="map()">
+<body>
   <div class="wrapper">
-    <header class="header user">
-      <div class="user__authoriz-btn"><a class="authoriz-btn" href="#">Авторизоваться</a></div>
-      <div class="user__card card_align effect__click">
-        <div class="user__card-block welcome">
-          <div class="welcome__block">
-            <div class="user__avatar"><img class="user__img" src="assets/images/avatar.jpg" alt="User-avatar"></div>
-            <div class="info__user">
-              <h2 class="user__name">Пацура Александр</h2>
-              <p class="user__desc">Личный сайт веб разработчика</p>
-            </div>
-            <div class="user__socials">
-              <ul class="socials">
-                <li class="socials__item"><a class="socials__link socials__item_vk" href="https://vk.com/alexanderpatsura" target="_blank">
-                    <svg class="sprites sprites_index-color" width="30" height="22">
-                      <use xlink:href="assets/images/sprites/sprite.svg#vk"></use>
-                    </svg></a></li>
-                <li class="socials__item"><a class="socials__link socials__item_github" href="https://github.com/AlexandrPatsura" target="_blank">
-                    <svg class="sprites sprites_index-color" width="30" height="22">
-                      <use xlink:href="assets/images/sprites/sprite.svg#github"></use>
-                    </svg></a></li>
-                <li class="socials__item"><a class="socials__link socials__item_in" href="https://www.linkedin.com/in/alexander-patsura-355a8b13b/" target="_blank">
-                    <svg class="sprites sprites_index-color" width="30" height="22">
-                      <use xlink:href="assets/images/sprites/sprite.svg#in"></use>
-                    </svg></a></li>
-              </ul>
-            </div>
-            <nav>
-              <ul class="menu user__menu">
-                <li class="menu__items items_index"><a class="menu__items_link link_index" href="works.html">Мои работы</a></li>
-                <li class="menu__items items_index"><a class="menu__items_link link_index" href="about.html">Обо мне</a></li>
-                <li class="menu__items items_index"><a class="menu__items_link link_index" href="blog.html">Блог</a></li>
-              </ul>
-            </nav>
+    <header class="header">
+      <div class="header__nav-bar">
+        <div class="user__authoriz-btn"><a class="authoriz-btn" href="#">Авторизоваться</a></div>
+      </div>
+      <div class="user__card card-center">
+        <div class="flipping-card welcome">
+          <div class="user__avatar"><img class="user__img" src="assets/images/avatar.jpg" alt="User-avatar"></div>
+          <div class="info__user">
+            <h2 class="user__name">Пацура Александр</h2>
+            <p class="user__desc">Личный сайт веб разработчика</p>
           </div>
+          <nav class="info__socials">
+            <ul class="socials">
+              <li class="socials__item"><a class="socials__link socials__item_vk" href="https://vk.com/alexanderpatsura" target="_blank">
+                  <svg class="socials__sprite sprite_color" width="30" height="22">
+                    <use xlink:href="assets/images/sprites/sprite.svg#vk"></use>
+                  </svg></a></li>
+              <li class="socials__item"><a class="socials__link socials__item_github" href="https://github.com/AlexandrPatsura" target="_blank">
+                  <svg class="socials__sprite sprite_color" width="30" height="22">
+                    <use xlink:href="assets/images/sprites/sprite.svg#github"></use>
+                  </svg></a></li>
+              <li class="socials__item"><a class="socials__link socials__item_in" href="https://www.linkedin.com/in/alexander-patsura-355a8b13b/" target="_blank">
+                  <svg class="socials__sprite sprite_color" width="30" height="22">
+                    <use xlink:href="assets/images/sprites/sprite.svg#in"></use>
+                  </svg></a></li>
+            </ul>
+          </nav>
+          <nav class="info__menu">
+            <ul class="menu">
+              <li class="menu__item_border menu-item_bgc"><a class="menu__link_padding" href="works.html">Мои работы</a></li>
+              <li class="menu__item_border menu-item_bgc"><a class="menu__link_padding" href="about.html">Обо мне</a></li>
+              <li class="menu__item_border menu-item_bgc"><a class="menu__link_padding" href="blog.html">Блог</a></li>
+            </ul>
+          </nav>
         </div>
-        <div class="user__card-block authoriz">
-          <h2 class="block-subtitle">Авторизуйтесь</h2>
+        <div class="flipping-card authoriz">
+          <h2 class="subtitle">Авторизуйтесь</h2>
           <form class="auth-form">
             <div class="auth-form__row">
               <label class="input__wrapper" for="login">
@@ -81,20 +81,20 @@
               </label>
             </div>
           </div>
-          <nav>
-            <ul class="menu user__menu">
-              <li class="menu__items items_index"><a class="menu__items_link link_index" href="index.html">На главную</a></li>
-              <li class="menu__items items_index"><a class="menu__items_link link_index" href="about.html">Войти</a></li>
+          <nav class="info__menu">
+            <ul class="menu">
+              <li class="menu__item_border menu-item_bgc menu-item-width"><a class="menu__link_padding" href="index.html">На главную</a></li>
+              <li class="menu__item_border menu-item_bgc menu-item-width"><a class="menu__link_padding" href="about.html">Войти</a></li>
             </ul>
           </nav>
         </div>
       </div>
-      <div class="user__footer">
-        <div class="footer__copyright">&copy; Пацура Александр | создано с любовью в LoftSchool | 2017</div>
+      <div class="header__footer">
+        <div class="copyright">&copy; Александр Пацура | создано с любовью в LoftSchool | 2017</div>
       </div>
     </header>
   </div>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2_VJSqqef31yShJu6MnuTYe88TENum5U"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="assets/scripts/bundle.js"></script>
-  <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2_VJSqqef31yShJu6MnuTYe88TENum5U&amp;callback=initMap"></script>
 </body>
