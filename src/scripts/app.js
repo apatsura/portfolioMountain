@@ -1,19 +1,5 @@
 (function() {
   
-  // menu spy
-  $(window).scroll(function(){
-    var $sections = $('.article');
-    $sections.each(function(i,el){
-      var top  = $(el).offset().top-100;
-      var bottom = top +$(el).height();
-      var scroll = $(window).scrollTop();
-      var id = $(el).attr('id');
-      if( scroll > top && scroll < bottom){
-        $('a.active').removeClass('active');
-        $('a[href="#'+id+'"]').addClass('active');
-      }
-    })
-  });
   // переход к статье через меню в сайдбаре
   $(".article__item_link").on("click","a", function (event) {
     // исключаем стандартную реакцию браузера
@@ -28,12 +14,14 @@
   
 })();
 
-// import { parallax } from './common/parallax';
+import { parallax } from './common/parallax';
 import { flipCard } from './common/flipCard';
 import { toggleMenu } from './common/toggleMenu';
-// import { initMap } from './common/googleMap';
+import { menuSpy } from './common/menuSpy';
+import { initMap } from './common/initMap';
 
-// parallax();
+parallax();
 flipCard();
 toggleMenu();
-// initMap();
+menuSpy();
+initMap();
