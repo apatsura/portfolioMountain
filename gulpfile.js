@@ -102,7 +102,17 @@ function styles() {
 // images
 function images() {
   return gulp.src(paths.images.src,) // {since: gulp.lastRun('images')})
-  .pipe(imagemin({optimizationLevel: 5}))
+  // .pipe(imagemin([
+  //   imagemin.gifsicle({interlaced: true}),
+  //   imagemin.jpegtran({progressive: true}),
+  //   imagemin.optipng({optimizationLevel: 5}),
+  //   imagemin.svgo({
+  //       plugins: [
+  //           {removeViewBox: true},
+  //           {cleanupIDs: false}
+  //       ]
+  //   })
+  // ]))
   .pipe(gulp.dest(paths.images.dest));
 }
 
@@ -182,8 +192,8 @@ exports.clean = clean;
 exports.images = images;
 exports.sprites = sprites;
 exports.scripts = scripts;
-// exports.watch = watch;
-// exports.server = server;
+exports.watch = watch;
+exports.server = server;
 
 gulp.task('default', gulp.series(
   gulp.parallel(fonts, styles, templates, images, sprites, scripts),
