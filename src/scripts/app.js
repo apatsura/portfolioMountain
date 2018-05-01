@@ -1,7 +1,7 @@
 (function() {
   
   // переход к статье через меню в сайдбаре
-  $(".article__item_link").on("click","a", function (event) {
+  $('.article__item_link').on('click','a', function (event) {
     // исключаем стандартную реакцию браузера
     event.preventDefault();
     // получем идентификатор блока из атрибута href
@@ -14,14 +14,14 @@
   
 })();
 
-import { parallax } from './common/parallax';
+// import { parallax } from './common/parallax';
 import { flipCard } from './common/flipCard';
 import { toggleMenu } from './common/toggleMenu';
-import { menuSpy } from './common/menuSpy';
+// import { menuSpy } from './common/menuSpy';
 import { initMap } from './common/initMap';
 
-parallax();
+// parallax();
 flipCard();
 toggleMenu();
-menuSpy();
+// menuSpy();
 initMap();

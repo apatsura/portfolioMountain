@@ -50,7 +50,7 @@ export const initMap = function () {
       },
     ]
   }
-  var map = new google.maps.Map(document.getElementById("map"), myGeo);
+  var map = new google.maps.Map(document.getElementById('map'), myGeo);
   var marker = new google.maps.Marker({
     position: home,
     map: map
