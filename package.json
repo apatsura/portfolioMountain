@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "browser-sync": "^2.24.1",
+    "browser-sync": "^2.24.2",
     "del": "^3.0.0",
     "eslint": "^4.19.1",
     "eslint-config-standard": "^11.0.0",
@@ -30,10 +30,10 @@
     "gulp-sourcemaps": "^2.6.4",
     "gulp-svg-sprite": "^1.4.0",
     "gulp-svgmin": "^1.2.4",
-    "gulp-webpack": "^1.5.0",
     "node-normalize-scss": "^3.0.0",
     "uglifyjs-webpack-plugin": "^1.2.5",
-    "webpack": "^4.6.0"
+    "webpack": "^4.6.0",
+    "webpack-stream": "^4.0.3"
   },
   "dependencies": {
     "npm": "^6.0.0"

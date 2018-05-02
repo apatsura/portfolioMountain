@@ -23,8 +23,8 @@ const cheerio = require('gulp-cheerio');
 const spriteConfig = require('./sprite.config.js');
 
 // webpack
-const gulpWebpack = require('gulp-webpack'); // v2
-const webpack = require('webpack'); // v3
+const gulpWebpack = require('webpack-stream');
+const webpack = require('webpack');
 const webpackConfig = require('./webpack.config.js');
 
 const paths = {
@@ -101,50 +101,50 @@ function styles() {
 
 // images
 function images() {
-  return gulp.src(paths.images.src,) // {since: gulp.lastRun('images')})
-  // .pipe(imagemin([
-  //   imagemin.gifsicle({interlaced: true}),
-  //   imagemin.jpegtran({progressive: true}),
-  //   imagemin.optipng({optimizationLevel: 5}),
-  //   imagemin.svgo({
-  //       plugins: [
-  //           {removeViewBox: true},
-  //           {cleanupIDs: false}
-  //       ]
-  //   })
-  // ]))
+  return gulp.src(paths.images.src, ) // {since: gulp.lastRun('images')})
+  .pipe(imagemin([
+    imagemin.gifsicle({ interlaced: true }),
+    imagemin.jpegtran({ progressive: true }),
+    imagemin.optipng({ optimizationLevel: 5 }),
+    imagemin.svgo({
+      plugins: [
+        { removeViewBox: true },
+        { cleanupIDs: false }
+      ]
+    })
+  ]))
   .pipe(gulp.dest(paths.images.dest));
 }
 
 // svg
 function sprites() {
   return gulp.src(paths.sprites.src)
-    .pipe(plumber({
-      errorHandler: notify.onError(function(error) {
-        return {
-          title: 'Sprites',
-          message: error.message
-        };
-      })
-    }))
-    .pipe(svgmin({
-      js2svg: {
-        pretty: true
-      }
-    }))
-    .pipe(cheerio({
-      run: function($) {
-        $('[fill]').removeAttr('fill');
-        $('[stroke]').removeAttr('stroke');
-        $('[style]').removeAttr('style');
-      },
-      parserOptions: {
-        xmlMode: true
-      }
-    }))
-    // .pipe(replace('&gt;', '>'))
-    .pipe(svgSprite(spriteConfig, svgSprite))
-    .pipe(gulp.dest(paths.sprites.dest));
+  .pipe(plumber({
+    errorHandler: notify.onError(function(error) {
+      return {
+        title: 'Sprites',
+        message: error.message
+      };
+    })
+  }))
+  .pipe(svgmin({
+    js2svg: {
+      pretty: true
+    }
+  }))
+  .pipe(cheerio({
+    run: function($) {
+      $('[fill]').removeAttr('fill');
+      $('[stroke]').removeAttr('stroke');
+      $('[style]').removeAttr('style');
+    },
+    parserOptions: {
+      xmlMode: true
+    }
+  }))
+  // .pipe(replace('&gt;', '>'))
+  .pipe(svgSprite(spriteConfig, svgSprite))
+  .pipe(gulp.dest(paths.sprites.dest));
 }
 
 // clean

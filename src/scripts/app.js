@@ -14,14 +14,14 @@
   
 })();
 
-// import { parallax } from './common/parallax';
-import { flipCard } from './common/flipCard';
-import { toggleMenu } from './common/toggleMenu';
+import { parallax } from './common/parallax';
+// import { flipCard } from './common/flipCard';
+// import { toggleMenu } from './common/toggleMenu';
 // import { menuSpy } from './common/menuSpy';
-import { initMap } from './common/initMap';
+// import { initMap } from './common/initMap';
 
-// parallax();
-flipCard();
-toggleMenu();
+parallax();
+// flipCard();
+// toggleMenu();
 // menuSpy();
-initMap();
+// initMap();
