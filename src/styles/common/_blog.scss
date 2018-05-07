@@ -41,7 +41,10 @@
   padding-top: 45px;
   padding-left: 50px;
 }
-.article__item_link  {
+div.article:last-child {
+  margin-bottom: 200px;
+}
+.article__item_link {
   color: #000000;
   padding: 10px;
 }
